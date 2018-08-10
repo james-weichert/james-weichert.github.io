@@ -88,7 +88,11 @@
 			<br />
 			<h2 id="section3">III: Neural Network (Multilayer Perceptron)</h2>
 
-				<p>The final baseline model is a simple neural network (or multilayer perceptron). This network only has a single hidden layer, which filters the neurons down from 31 to 3. The hidden layer uses a ReLU activation while the output layer uses a softmax activation function to give probabilistic values for the three classes. The highest activation out of the three output neurons is chosen as the classification. While the exact accuracy of the neural network is subject to noise because of the random initialization of all neurons in the network, this network achieved a accuracy of approximately 56.3%, which matches the classification accuracy of the logistic regression model.</p>
+				<p>The final baseline model is a simple neural network (or multilayer perceptron). This network only has a single hidden layer, which filters the neurons down from 31 to 3 (as shown in the diagram below).</p>
+
+				<img src="Assets/baseline/NNDiagram.png" class="img_small_center"/>
+
+				<p>The hidden layer uses a ReLU activation while the output layer uses a softmax activation function to give probabilistic values for the three classes. The highest activation out of the three output neurons is chosen as the classification. While the exact accuracy of the neural network is subject to noise because of the random initialization of all neurons in the network, this network achieved a accuracy of approximately 56.3%, which matches the classification accuracy of the logistic regression model.</p>
 
 				<img src="Assets/baseline/NN_Acc.png" class="code"/>
 
