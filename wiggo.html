@@ -68,12 +68,12 @@
 			<hr />
 			
 			<br />
-			<h2 id="section1">Overview</h2>
+			<h2 id="section1">I. Overview</h2>
 
 				<p>WIGGO (Weighted Importance &amp; Goal-adjusted GlickO) is a Glicko-based rating system for international football teams developed to find a more mathematically robust and predictive alternative to the official FIFA Ranking. Glicko is a rating algorithm that considers both a team’s strength (their rating) and the uncertainty around a team’s strength (their rating deviation) to calculate the probability that it will win a match against a certain opponent. When a team overperforms their win probability, their rating increases, and when they underperform, their rating decreases. The more games a team plays, the smaller their uncertainty rating, and the longer a team goes without a game, the larger their uncertainty rating. The inclusion of rating deviation serves to model the inherent uncertainty that exists around teams’ strengths in international football, given that teams only play a handful of games a year and each of them with potentially very different rosters. Both the ratings and the rating deviations are updated periodically; in WIGGO’s case, the update happens monthly.</p>
 
 			<br />
-			<h2 id="section2">Math</h2>
+			<h2 id="section2">II. Math</h2>
 
 				<p>The implementation of the WIGGO follows the two-step procedure outlined below:</p>
 
@@ -92,14 +92,14 @@
 
 				<p>There are two adjustments that WIGGO makes over the traditional Glicko system. The first is the incorporation of a Ki value as a way to account for match importance. WIGGO assigns games an importance weight one of three ways, shown in the table below:</p>
 
-				<img src="Assets/wiggo/GameType.png" class="img_small_center"/>
+				<img src="Assets/wiggo/GameType.png" class="img_xsmall_center"/>
 
 				<p>The second adjustment is in the calculation of actual game outcomes. Rather than mapping results to 0 (loss), 0.5 (draw), and 1 (win), WIGGO takes into account the goal difference of each match to determine how much each result was “worth” to each team. Each additional goal awards the winning team two thirds of the points between its previous win value and 1. Under this system, draws are still worth 0.5 to both teams, but a one-goal win is only worth 0.833 to the winning team and it is worth 0.167 to the losing team. The ratio of two thirds was found via cross-validation.</p>
 
 				<img src="Assets/wiggo/WiggoPlot.png" class="img_small_center"/>
 
 			<br />
-			<h2 id="section3">Performance</h2>
+			<h2 id="section3">III. Performance</h2>
 
 				<p>Lasek et al.’s “The predictive power of ranking systems in association football” (2013) is perhaps the most relevant research on the subject of men’s international football rankings. Their results showed that the FIFA Ranking is not particularly suited to predicting win probabilities and identified instead a variant of the Elo model currently in use for the FIFA Women’s World Ranking (FIFA WWR) and another used by the website <em><a href="http://www.eloratings.net" target="_new">Eloratings.net</a></em> as the strongest-performing individual ranking methods available. </p>
 
@@ -112,7 +112,7 @@
 				<img src="Assets/wiggo/variancechange.png" class="img_med_center"/>
 
 			<br />
-			<h2 id="section4">Examples</h2>
+			<h2 id="section4">IV. Examples</h2>
 
 				<p>WIGGO Rankings and Ratings are strongly related by what appears to be an odd polynomial relationship. The strength of the relationship means that if we were missing a team’s Ranking, we would be able to infer it from the Rating, and vice versa.</p>
 
