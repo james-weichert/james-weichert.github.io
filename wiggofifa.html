@@ -23,11 +23,7 @@
 				
 			</td>
 			<td><a href="dp.html">
-				Data Preprocessing</a>
-				
-			</td>
-			<td><a href="eda.html">
-				EDA</a>
+				Data and EDA</a>
 				
 			</td>
 			<td><a href="wiggo.html">
@@ -70,7 +66,13 @@
 				<li><a href="#section4">Conclusion</a></li>
 			</ol>
 			<hr />
-			<p>Before we can build our perfect model, we need to compare and test the WIGGO ranking system against the FIFA one. When we start making our final model, it will be important for us to know which of the two ranking systems is better at predicting the outcomes of these games. As such, we can build other, more interpretable models that give us some insight into which of these systems can really make more powerful predictions.</p>
+			<p>Before we can build our perfect model, we need to compare and test the WIGGO ranking system against the FIFA one. When we start making our final model, it will be important for us to know which of the two ranking systems is better at predicting the outcomes of these games.</p>
+
+			<p>At its surface, it appears that WIGGO can predict more accurately than FIFA can. If we were to predict every game strictly by which team has the higher WIGGO/FIFA Rating, we can see that WIGGO outpaces FIFA in both World Cup games and non-World Cup games:</p>
+
+			<img src="Assets/wiggofifa/Beginning_Acc.png" class="code"/>
+
+			<p>Though, these statistics don't really give us an idea of how regression models will handle this data, and they don't show us how the WIGGO/FIFA data might interact with other predictors. As such, we can build other, more interpretable models that give us some insight into which of these ranking systems can really make more powerful predictions.</p>
 
 			<br />
 			<h2 id="section1">I: Exploring WIGGO and FIFA</h2>
