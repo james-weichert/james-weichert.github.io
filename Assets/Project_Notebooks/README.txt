@@ -1,0 +1,1 @@
+The notebooks are arranged in order from 0 to 5. Each notebook is contained within its own folder titled “nbX”. To access a notebook, enter the desired folder and open the .ipynb file. The .csv files required for the notebooks are contained within each notebook’s folder.

@@ -1,0 +1,65 @@
+,round,team_a,team_b,pred_winner,true_winner,correct
+0,Group,Russia,Saudi Arabia,Russia,Russia,1
+1,Group,Morocco,Iran,Morocco,Iran,0
+2,Group,France,Australia,France,France,1
+3,Group,Peru,Denmark,Denmark,Denmark,1
+4,Group,Costa Rica,Serbia,Serbia,Serbia,1
+5,Group,Brazil,Switzerland,Brazil,Tie,0
+6,Group,Colombia,Japan,Colombia,Japan,0
+7,Group,Egypt,Uruguay,Uruguay,Uruguay,1
+8,Group,Portugal,Spain,Spain,Tie,0
+9,Group,Argentina,Iceland,Argentina,Tie,0
+10,Group,Croatia,Nigeria,Croatia,Croatia,1
+11,Group,Germany,Mexico,Germany,Mexico,0
+12,Group,Sweden,South Korea,Sweden,Sweden,1
+13,Group,Tunisia,England,England,England,1
+14,Group,Poland,Senegal,Poland,Senegal,0
+15,Group,Russia,Egypt,Russia,Russia,1
+16,Group,Uruguay,Saudi Arabia,Uruguay,Uruguay,1
+17,Group,Denmark,Australia,Denmark,Tie,0
+18,Group,Argentina,Croatia,Argentina,Croatia,0
+19,Group,Nigeria,Iceland,Iceland,Nigeria,0
+20,Group,Belgium,Tunisia,Belgium,Belgium,1
+21,Group,Germany,Sweden,Germany,Germany,1
+22,Group,Japan,Senegal,Senegal,Tie,0
+23,Group,Portugal,Morocco,Portugal,Portugal,1
+24,Group,Iran,Spain,Spain,Spain,1
+25,Group,France,Peru,France,France,1
+26,Group,Brazil,Costa Rica,Brazil,Brazil,1
+27,Group,Serbia,Switzerland,Serbia,Switzerland,0
+28,Group,South Korea,Mexico,Mexico,Mexico,1
+29,Group,England,Panama,England,England,1
+30,Group,Poland,Colombia,Colombia,Colombia,1
+31,Group,Saudi Arabia,Egypt,Egypt,Saudi Arabia,0
+32,Group,Iran,Portugal,Portugal,Tie,0
+33,Group,Australia,Peru,Peru,Peru,1
+34,Group,Nigeria,Argentina,Argentina,Argentina,1
+35,Group,Mexico,Sweden,Mexico,Sweden,0
+36,Group,Switzerland,Costa Rica,Switzerland,Tie,0
+37,Group,Senegal,Colombia,Colombia,Colombia,1
+38,Group,England,Belgium,Belgium,Belgium,1
+39,Group,Uruguay,Russia,Uruguay,Uruguay,1
+40,Group,Spain,Morocco,Spain,Tie,0
+41,Group,Denmark,France,France,Tie,0
+42,Group,Iceland,Croatia,Croatia,Croatia,1
+43,Group,South Korea,Germany,Germany,South Korea,0
+44,Group,Serbia,Brazil,Brazil,Brazil,1
+45,Group,Japan,Poland,Japan,Poland,0
+46,Group,Panama,Tunisia,Tunisia,Tunisia,1
+47,Group,Belgium,Panama,Belgium,Belgium,1
+48,Pre-Quarters,Belgium,Japan,Belgium,Belgium,1
+49,Pre-Quarters,Brazil,Mexico,Brazil,Brazil,1
+50,Pre-Quarters,Colombia,England,England,Tie,0
+51,Pre-Quarters,Croatia,Denmark,Croatia,Tie,0
+52,Pre-Quarters,Spain,Russia,Spain,Tie,0
+53,Pre-Quarters,France,Argentina,France,France,1
+54,Pre-Quarters,Sweden,Switzerland,Switzerland,Sweden,0
+55,Pre-Quarters,Uruguay,Protugal,Uruguay,Uruguay,1
+56,Quarters,Uruguay,France,France,France,1
+57,Quarters,Sweden,England,England,England,1
+58,Quarters,Russia,Croatia,Croatia,Tie,0
+59,Quarters,Brazil,Belgim,Brazil,Belgium,0
+60,Semis,France,Belgium,France,France,1
+61,Semis,Croatia,England,England,Croatia,0
+62,Consolation,Belgium,England,Belgium,Belgium,1
+63,Finals,France,Croatia,France,France,1
