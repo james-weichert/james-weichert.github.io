@@ -64,26 +64,16 @@
 			<hr />
 			<h2>Outline</h2>
 			<ol type="I">
-				<li><a href="#section1">Read-In Data, Train-Test Split, Clean</a></li>
-				<li><a href="#section2">Exploring WIGGO and FIFA</a></li>
-				<li><a href="#section3">Logistic Regression</a></li>
-				<li><a href="#section4">Ridge Regression</a></li>
-				<li><a href="#section5">Conclusion</a></li>
+				<li><a href="#section1">Exploring WIGGO and FIFA</a></li>
+				<li><a href="#section2">Logistic Regression</a></li>
+				<li><a href="#section3">Ridge Regression</a></li>
+				<li><a href="#section4">Conclusion</a></li>
 			</ol>
 			<hr />
 			<p>Before we can build our perfect model, we need to compare and test the WIGGO ranking system against the FIFA one. When we start making our final model, it will be important for us to know which of the two ranking systems is better at predicting the outcomes of these games. As such, we can build other, more interpretable models that give us some insight into which of these systems can really make more powerful predictions.</p>
 
 			<br />
-			<h2 id="section1">I: Read-In Data, Train-Test Split, Clean</h2>
-					
-				<img src="Assets/wiggofifa/Read_in.png" class="code"/>
-				<img src="Assets/wiggofifa/Update_2018.png" class="code"/>
-				<img src="Assets/wiggofifa/One_Hot_Encode.png" class="code"/>
-				<img src="Assets/wiggofifa/Train_Test_Split.png" class="code"/>
-				<img src="Assets/wiggofifa/Separate_Response.png" class="code"/>
-
-			<br />
-			<h2 id="section2">II: Exploring WIGGO and FIFA</h2>
+			<h2 id="section1">I: Exploring WIGGO and FIFA</h2>
 
 				<p>The plot below shows FIFA Rankings for nations plotted against WIGGO Rankings for the same nations. The plot is meant to show how well WIGGO rankings relate to their FIFA counterparts.</p>
 
@@ -100,7 +90,7 @@
 				<p>There is also an apparent relationship (although perhaps not linear) between a team's FIFA points and their WIGGO points at any given month. The three points along y = 0 were exceptions in our matching function, but since it's only three points, we'll go ahead with the analysis.</p>
 
 			<br />
-			<h2 id="section3">III: Logistic Regression</h2>
+			<h2 id="section2">II: Logistic Regression</h2>
 
 				<p>Now that we know how WIGGO's Rankings and Ratings compare to FIFA's, let's see which of the two can make more powerful World Cup predictions. To do this, we can use Multinomial nad Logistic Regression.</p>
 
@@ -110,18 +100,17 @@
 
 				<p>Note: We cannot report the FIFA model's accuracy on the last 4 World Cups because FIFA data did not exist until after the 2010 World Cup. For the sake of completeness, and to show the consistency of WIGGO's predictions, though, we additionally show WIGGO's accuracy on the last 4 World Cups.</p>
 
-				<img src="Assets/wiggofifa/Mult_Logreg.png" class="code"/>
-				<img src="Assets/wiggofifa/OvR_Logreg.png" class="code"/>
+				<img src="Assets/wiggofifa/Multi_Acc.png" class="code"/>
+				<img src="Assets/wiggofifa/OVR_Acc.png" class="code"/>
 
 				<p>In both regressions, the WIGGO data outperformed the FIFA data by a significant margin. While this lone suggests that WIGGO is ths more accurate predictor of the two, there are more regression techniques that we can use to confirm this output.</p>
 
 			<br />
-			<h2 id="section4">IV: Ridge Regression</h2>
+			<h2 id="section3">III: Ridge Regression</h2>
 
 				<p>Another way for us to test these two ranking systems is to include both WIGGO and FIFA in a model that uses Regularization, and see which of the coefficients for the two sets of predictors gets shrunk toward 0. Here, we will run a Ridge Regression on all the predictors in the dataset, though we will care most about the ones that involve WIGGO and FIFA data.</p>
 
-				<img src="Assets/wiggofifa/Ridge_Fit.png" class="code"/>
-				<img src="Assets/wiggofifa/Ridge_Accuracies.png" class="code"/>
+				<img src="Assets/wiggofifa/Ridge_Acc.png" class="code"/>
 
 				<p>The Ridge model performs fairly well, though, this information isn't terribly useful for comparing WIGGO and FIFA. Instead, we need to investigate the coefficients that the model assigns to each of the predictors.</p>
 
@@ -145,8 +134,6 @@
 
 				<p>Though, we can still get more precise with our analysis. Let's try running a Ridge regression on just the WIGGO and FIFA Rankings, and then another on just the WIGGO and FIFA Ratings.</p>
 
-				<img src="Assets/wiggofifa/Ridge_Rankings_Fit.png" class="code"/>
-
 				<p>The following bar plot is built in a similar fashion to the previous one, though it shows the results of a Ridge regression model that was fit on just the Ranking data.</p>
 
 				<img src="Assets/wiggofifa/Ridge_Rankings.png" class="plot"/>
@@ -155,13 +142,12 @@
 
 				<p>Now let's do the same with the WIGGO/FIFA Ratings:</p>
 
-				<img src="Assets/wiggofifa/Ridge_Ratings_Fit.png" class="code"/>
 				<img src="Assets/wiggofifa/Ridge_Ratings.png" class="plot"/>
 
 				<p>And again, the model shows exactly what we would expect.</p>
 
 			<br />
-			<h2 id="section5">V: Conclusion</h2>
+			<h2 id="section4">IV: Conclusion</h2>
 
 				<p>By now, it is obvious that WIGGO provides more prediction power than FIFA does when it comes to predicting World Cup games. Each regression, whether trained on the Rankings, the Ratings, or all the data combined, indicates that the WIGGO data is more closely related to the outcomes of World Cup matches than the FIFA data is. As such, we will use the WIGGO data as our main indicator of team strength as we build our final model.</p>
 		</div>

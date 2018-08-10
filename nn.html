@@ -72,10 +72,42 @@
 			<br />
 			<h2 id="section1">I: Logistic Regression With Penalization</h2>
 
-				<img src="Assets/finalmodels/Ridge_Predictors.png" class="code"/>
-				<img src="Assets/finalmodels/Ridge_Ranking.png" class="code"/>
-				<img src="Assets/finalmodels/Ridge_Points.png" class="code"/>
-				<img src="Assets/finalmodels/All_Ridge.png" class="code"/>
+				<p>As an extension of a simple multinomial or One-vs-Rest logistic regression model, a new logistic regression model was trained on the combined WIGGO and FIFA data to fit the best decision boundary using a limited subset of predictors. To do this, Ridge Regression was run on the data to add a penalty term to the overall loss function that penalizes the model for having too many predictors.</p>
+
+				<p>Ridge Regression was used on four variations of the combined WIGGO and FIFA dataset:</p>
+
+				<ul>
+					<li>All Predictors (including all WIGGO and FIFA rankings and points)</li>
+					<li>Only the WIGGO and FIFA rankings</li>
+					<li>Only the WIGGO and FIFA points</li>
+					<li>The WIGGO and FIFA rankings and points, but no other predictors</li>
+				</ul>
+
+				<p>For each regression model, KFold cross-validation was performed using <span class="code_text">RidgeClassifierCV</span> and <span class="code_text">KFold</span> from sklearn. Each time, the cross-validation chose from a list of 16 Ridge shrinkage parameters (lambdas): <span class="code_text">{0.001, 0.005, 0.1, 0.5, 1, 5, 10, 50, 100, 150, 200, 250, 1000, 10000, 50000, 100000}</span>. The results (chosen shrinkage parameters) of the 5-fold cross-validation on each data variation are shown below.</p>
+
+				<ul>
+					<li>
+						<p>All Predictors:</p>
+						<img src="Assets/finalmodels/Shrink1.png" class="code"/>
+					</li>
+					<li>
+						<p>Rankings Only:</p>
+						<img src="Assets/finalmodels/Shrink2.png" class="code"/>
+					</li>
+					<li>
+						<p>Points Only:</p>
+						<img src="Assets/finalmodels/Shrink3.png" class="code"/>
+					</li>
+					<li>
+						<p>Rankings and Points Only:</p>
+						<img src="Assets/finalmodels/Shrink3.png" class="code"/>
+					</li>
+				</ul>
+
+				<p>Finally, the fitted models were scored against the three sets of data: the training set, which includes all international matches except for the 2018 and 2014 FIFA World Cup matches, the validation set, which includes all matches for the 2014 FIFA World Cup, and the test set, which includes all matches for the 2018 FIFA World Cup (i.e. the project's prediction goal). The accuracy of each model with respect to each dataset can be seen below.</p>
+
+
+				<img src="Assets/finalmodels/Ridge_Acc.png" class="code"/>
 
 			<br />
 			<h2 id="section2">II: Ensemble Techniques</h2>
@@ -84,30 +116,36 @@
 					<br />
 					<h3 id="section2i">i: Bagging</h3>
 
-						<img src="Assets/finalmodels/Bagging_Accuracy.png" class="code"/>
+						<p>A Bagging model of 25 decision trees with max-depth of 4 predicting on the  </p>
+
+						<img src="Assets/finalmodels/Bagging_Acc.png" class="code"/>
 
 					<br />
 					<h3 id="section2ii">ii: AdaBoost (Boosting)</h3>
 
-						<img src="Assets/finalmodels/Boosting_Accuracy.png" class="code"/>
+						<img src="Assets/finalmodels/Boosting_Acc.png" class="code"/>
 						<img src="Assets/finalmodels/Boosting_Graph.png" class="code"/>
 
 					<br />
 					<h3 id="section2iii">iii: Random Forest</h3>	
 
-						<img src="Assets/finalmodels/RF_Accuracy.png" class="code"/>
+						<img src="Assets/finalmodels/RF_Acc.png" class="code"/>
 						<img src="Assets/finalmodels/RF_Graph.png" class="code"/>
 
 					<br />
 					<h3 id="section2iv">iv: Combined Ensemble</h3>
 
-						<img src="Assets/finalmodels/Ensemble_Accuracy.png" class="code"/>
+						<img src="Assets/finalmodels/Ensemble_Acc.png" class="code"/>
 						<img src="Assets/finalmodels/Ensemble_Graph.png" class="code"/>
 
 					<br />
 					<h3 id="section2v">v: Augmented Ensemble Decision Tree</h3>
 
-						<img src="Assets/finalmodels/All_Ensemble_Accuracy_1.png" class="code"/>
+						<img src="Assets/finalmodels/AT_Acc.png" class="code"/>
+
+					<br />
+					<h3 id="section2vi">vi: Ensemble Models Summary</h3>
+					
 						<img src="Assets/finalmodels/All_Ensemble_Accuracy_2.png" class="code"/>
 				</div>
 
@@ -119,7 +157,7 @@
 
 				<table class="normal_table">
 					<tr>
-						<td>Data Set</td>
+						<td class="left_align">Data Set</td>
 						<td>Ridge Regression</td>
 						<td>Bagging</td>
 						<td>AdaBoost (Boosting)</td>
@@ -129,33 +167,33 @@
 						<td>Neural Network</td>
 					</tr>
 					<tr>
-						<td>Training</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-					</tr>
-					<tr>
-						<td>Validation</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
+						<td class="left_align">Training</td>
+						<td>58.4%</td>
+						<td>-</td>
+						<td>61.4%</td>
+						<td>58.9%</td>
+						<td>59.4%</td>
+						<td>61.7%</td>
 						<td>00.00%</td>
 					</tr>
 					<tr>
-						<td>Test</td>
+						<td class="left_align">Validation</td>
+						<td>57.8%</td>
+						<td>46.9%</td>
+						<td>64.1%</td>
+						<td>59.4%</td>
+						<td>60.9%</td>
+						<td>64.1%</td>
 						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
-						<td>00.00%</td>
+					</tr>
+					<tr>
+						<td class="left_align">Test</td>
+						<td>59.4%</td>
+						<td>54.7%</td>
+						<td>56.2%</td>
+						<td>54.7%</td>
+						<td>54.7%</td>
+						<td>56.2%</td>
 						<td>00.00%</td>
 					</tr>
 				</table>
