@@ -215,3 +215,12 @@ ol {
 .mono_text {
 	font-family: monospace;
 }
+.good_link {
+	text-decoration: underline;
+	color: #C95D63;
+}
+.quote {
+	text-align: center;
+	font-size: 1.4em;
+	color: #C95D63;
+}

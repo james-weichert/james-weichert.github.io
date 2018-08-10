@@ -72,7 +72,8 @@
 			</ol>
 			<hr />
 				
-			<h3 id="section1">I. Available Data</h3>
+			<br />
+			<h2 id="section1">I. Available Data</h2>
 
 				<p>Our dataset includes information on every game contested by two FIFA members since 2006. However, since information on the FIFA Ranking and FIFA Points is only available starting in 2011, our final dataset is restricted to every game contested by two FIFA members since 2011.</p>
 
@@ -82,7 +83,7 @@
 
 				<p>Below are the variables that were either available to us or we calculated ourselves.</p>
 
-				<h4 id="section1i">i. Team Information</h4>
+				<h3 id="section1i">i. Team Information</h3>
 
 				<ul>
 					<li>
@@ -97,7 +98,7 @@
 					<li><p><strong>Form</strong>: For each team, we computed the goal difference in each of their last 10 games as a way to measure their form. The rationale behind including this metric is that a historically strong team going through a bad run of form (like Germany prior to the 2018 World Cup) would not be picked up by metrics like FIFA or WIGGO.</p></li>
 				</ul>
 
-				<h4 id="section1ii">ii. Game Information</h4>
+				<h3 id="section1ii">ii. Game Information</h3>
 
 				<ul>
 					<li>
@@ -116,7 +117,7 @@
 					</li>
 				</ul>
 
-				<h4 id="section1iii">iii. Geographic Information</h4>
+				<h3 id="section1iii">iii. Geographic Information</h3>
 
 				<ul>
 					<li>
@@ -163,7 +164,7 @@
 						<img src="Assets/data/TimeZones.png" class="img_med_center"/>
 					</li>
 					<li>
-						<p><strong>Distance from Home</strong>: The distance in kilometers between the game location and each team’s “home field.” This was meant as a more nuanced measure for Home Advantage, <em><a href="https://fivethirtyeight.com/features/how-our-2018-world-cup-predictions-work/" target="_new">as research shows</a></em> that teams get a small boost when they’re playing close to home as well. The way we determined each team’s home field was by identifying the city within their country where they had played the most games in the dataset. We felt this was a good proxy for where each federation felt that their home advantage would be strongest. Below is a table with the first five “home fields” in the sample.</p>
+						<p><strong>Distance from Home</strong>: The distance in kilometers between the game location and each team’s “home field.” This was meant as a more nuanced measure for Home Advantage, <em><a href="https://fivethirtyeight.com/features/how-our-2018-world-cup-predictions-work/" target="_new" class="good_link">as research shows</a></em> that teams get a small boost when they’re playing close to home as well. The way we determined each team’s home field was by identifying the city within their country where they had played the most games in the dataset. We felt this was a good proxy for where each federation felt that their home advantage would be strongest. Below is a table with the first five “home fields” in the sample.</p>
 
 						<img src="Assets/data/Home_Field_Table.png" class="img_xsmall_center"/>
 
@@ -179,7 +180,7 @@
 					</li>
 				</ul>
 
-				<h4 id="section1iv">iv. Fatigue Metrics</h4>
+				<h3 id="section1iv">iv. Fatigue Metrics</h3>
 
 				<ul>
 					<li>
@@ -191,12 +192,12 @@
 						<p><strong>Travel Distance</strong>: The distance between the city of each team’s previous game and the city of their current game, divided by the days since their last game. This metric is in km/day. If a team’s last game occurred over two weeks before, travel distance is set to zero.</p>
 					</li>
 					<li>
-						<p><strong>Time Zone Delta</strong>: The difference in time zone between the city of each team’s previous game and the city of their current game, divided by the days since their last game. This metric is in hours/day. If a team’s last game occurred over two weeks before, time zone delta is zero. The motivation for this metric is research that shows time zone changes and jetlag <em><a href="http://www.sciencemag.org/news/2017/01/jet-lag-puts-baseball-players-their-game" target="_new">affect MLB teams’ performances</a></em>.</p>
+						<p><strong>Time Zone Delta</strong>: The difference in time zone between the city of each team’s previous game and the city of their current game, divided by the days since their last game. This metric is in hours/day. If a team’s last game occurred over two weeks before, time zone delta is zero. The motivation for this metric is research that shows time zone changes and jetlag <em><a href="http://www.sciencemag.org/news/2017/01/jet-lag-puts-baseball-players-their-game" target="_new" class="good_link">affect MLB teams’ performances</a></em>.</p>
 					</li>
 				</ul>
 
 			<br />
-			<h3 id="section2">II. Predictor Correlations</h3>
+			<h2 id="section2">II. Predictor Correlations</h2>
 
 				<p>Not all the variables mentioned above were used as predictors (e.g. team’s confederations). The matrix below shows the correlation between all of our final predictor variables, with the response variable, Win, as the first row and column.</p>
 
@@ -220,7 +221,7 @@
 				</ul>
 
 			<br />
-			<h3 id="section3">III. Example Data</h3>
+			<h2 id="section3">III. Example Data</h2>
 
 				<p>Here is the example row for the World Cup final with every variable available.</p>
 

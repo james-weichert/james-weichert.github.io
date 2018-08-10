@@ -64,25 +64,70 @@
 				<li><a href="#section2">Motivation</a></li>
 				<li><a href="#section3">Goals and Research Question</a></li>
 				<li><a href="#section4">Literature Review</a></li>
-				<li><a href="#section4">Resource Downloads</a></li>
+				<li><a href="#section5">Project Outline</a></li>
+				<li><a href="#section6">Resource Downloads</a></li>
 			</ol>
 			<hr />
-			<h2>Page Under Construction.</h2>
+			<br />
+				<p class="quote">"Football is a simple game. Twenty-two men chase a ball for 90 minutes and at the end, the Germans always win." – Gary Lineker</p>
+			<br />
+			<h2 id="section1">I. Introduction</h2>
+
+				<p>The FIFA World Cup is the pinnacle of international association football competition. Every four years, the World Cup captures the imagination of billions of people around the globe, and the World Cup final is the most-watched event on television. Part of what makes the World Cup so intriguing is that it always seems to be full of surprises, making it famously unpredictable. Even Gary Lineker’s famous quote was proven wrong – Germany, the defending world champions, crashed out of the group stage in dramatic fashion at the 2018 World Cup, the third time in a row the defending champions fail to make it to the knockout round. Who could have seen that coming? And does that mean football is truly unpredictable?</p>
+
+				<p>While there always remains a certain amount of randomness and luck in the playing of football games, various objective and numerical metrics can give reasonably sound indications of the relative strength of various teams. One such metric is FIFA’s own <em><a href="https://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html" class="good_link">World Ranking method for men’s football</a></em>, which orders teams based on past performances and successes. However, this method has often led to an underestimation of lower-ranked teams and has often been accused of being biased towards larger countries. A custom Win, Importance, and Goal-adjusted GlickO (WIGGO) ranking method developed by one of our group members with help from Prof. Rader uses a modified Glicko model to provide for a more accurate and updated ranking of teams. These metrics, when combined with previous match results, can be useful in predicting the outcome of an upcoming match based on the relative abilities and past performances of the two teams competing in the match.</p>
+
 
 			<br />
-			<h3 id="section1">I. Introduction</h3>
+			<h2 id="section2">II. Motivation</h2>
+
+				<p>Due to the increasing profitability of sports betting in recent years, the need to accurately predict football games has grown immensely. While football pundits have always rendered predictions that are at least somewhat accurate, the recent advent of sports statistics websites such as <em>FiveThirtyEight</em>’s <em><a href="https://projects.fivethirtyeight.com/2018-world-cup-predictions" class="good_link">World Cup prediction model</a></em> have proven extremely popular. Alternatively, sports predictions using neural networks (primarily feedforward networks such as multilayer perceptrons) have achieved high predictive accuracies in a variety of sports and contexts, including past World Cups.</p>
+
+				<p>Furthermore, there exists a sense among football purists that football as a sport will never “succumb” to the same statistical revolution that has swept through American sports like baseball, basketball, and even American football. Building a robust mathematical model that makes accurate football predictions would show that there is room for statistics and football to coexist, and, as data scientists, that would make us very happy.</p>
 
 			<br />
-			<h3 id="section2">II. Motivation</h3>
+			<h2 id="section3">III. Goals and Research Question</h2>
+
+				<p>Because we are working with a unique dataset in the form of WIGGO Rankings and Ratings, our research questions and objectives are two-fold:</p>
+
+				<ul>
+					<li><p><strong>Research Question 1</strong>: How do the FIFA Ranking and WIGGO Ranking systems compare in their abilities to predict World Cup game outcomes?</p></li>
+					<li><p><strong>Research Question 2</strong>: How do the FIFA Ranking and WIGGO Ranking systems compare in their abilities to predict World Cup game outcomes?</p></li>
+				</ul>
+
+				<ul>
+					<li><p><strong>Objective 1</strong>: To compare the predictive power of the standard FIFA Rankings and WIGGO Ranking in their abilities to predict World Cup game outcomes.</p></li>
+					<li><p><strong>Objective 2</strong>: Using a combination of previous match results, match location data, and fatigue metrics to our two available Ranking models, to create a Stacked model that can predict the outcomes of games played at the 2018 FIFA World Cup with higher accuracy than Las Vegas bookmakers.</p></li>
+				</ul>
 
 			<br />
-			<h3 id="section3">III. Goals and Research Question</h3>
+			<hr />
+			<h2 id="section4">IV. Literature Review</h2>
+
+				<p>The most relevant research on the subject of men’s international football rankings has been carried out by Lasek et al. (2012), who showed that ranking methods used in other contexts clearly outperform the FIFA Ranking when it comes to predicting match outcomes. Their research measured the performance of the FIFA Ranking and Elo-based ranking methods on two separate prediction accuracy metrics. Out of all the models they tested, they identified a variant of the Elo model currently in use for the FIFA Women’s World Ranking and another used by the website Eloratings.net as the strongest-performing individual ranking methods.</p>
+
+				<p>Further research by one of our team members, under instruction of Kevin Rader of the Harvard Statistics Department Faculty, has found that Glicko-based models perform even better than Elo-based models. That research yielded a new international football ranking called WIGGO that outperformed the best models previously identified by Lasek and even other variants of the Glicko system.</p>
+
+				<p>"The predictive power of ranking systems in association football," Lasek et al. <em>Int. J. Applied Pattern Recognition</em>, Vol. 1, No. 1, 2013.</p>
+
+				<p>“A Better FIFA Ranking,” Bieler, Goldberg, and Wiggins. Stat 91r Independent Research Project with Kevin Rader. Unpublished.</p>
 
 			<hr />
-			<h3 id="section4">IV. Literature Review</h3>
+			<h2 id="section5">V. Project Outline</h2>
+
+				<ul>
+					<li><p>Outline our available data with helpful visualizations</p></li>
+					<li><p>Provide a detailed description of the WIGGO Ranking model</p></li>
+					<li><p>Compare WIGGO and FIFA in terms of their usefulness in predicting match outcomes</p></li>
+					<li><p>Build basic baseline models for predicting match outcomes</p></li>
+					<li><p>Improve upon our basic baseline models for predicting match outcomes</p></li>
+					<li><p>Compare the predictive accuracy of our final models to the accuracy of bookmakers in the context of the 2018 FIFA World Cup</p></li>
+				</ul>
+
+
 
 			<hr />
-			<h3 id="section5">V. Resource Downloads</h3>
+			<h2 id="section6">VI. Resource Downloads</h2>
 
 		</div>
 	</div>
