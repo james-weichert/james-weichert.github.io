@@ -126,6 +126,12 @@ table {
 	width: 95%;
 	margin-left: 5%;
 }
+.img_large_center {
+	width: 95%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .img_med_center {
 	width: 75%;
@@ -136,6 +142,12 @@ table {
 
 .img_small_center {
 	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.img_xsmall_center {
+	width: 30%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -199,4 +211,7 @@ ol {
 .code_text {
 	font-family: monospace;
 	background-color: #DDD;
+}
+.mono_text {
+	font-family: monospace;
 }
