@@ -108,9 +108,9 @@
 				<p>In both regressions, the WIGGO data outperformed the FIFA data by a significant margin. While this alone suggests that WIGGO is ths more accurate predictor of the two, there are more regression techniques that we can use to confirm this output.</p>
 
 			<br />
-			<h2 id="section3">III. Ridge Regression</h2>
+			<h2 id="section3">III. Ridge Classification</h2>
 
-				<p>Another way for us to test these two ranking systems is to include both WIGGO and FIFA in a model that uses Regularization, and see which of the coefficients for the two sets of predictors gets shrunk toward 0. Here, we will run a Ridge Regression on all the predictors in the dataset, though we will care most about the ones that involve WIGGO and FIFA data.</p>
+				<p>Another way for us to test these two ranking systems is to include both WIGGO and FIFA in a model that uses Regularization, and see which of the coefficients for the two sets of predictors gets shrunk toward 0. Here, we will run a Ridge Classification on all the predictors in the dataset, though we will care most about the ones that involve WIGGO and FIFA data.</p>
 
 				<img src="Assets/wiggofifa/Ridge_Acc.png" class="code"/>
 
@@ -134,9 +134,9 @@
 
 				<p>Based on this output, it is safe to conclude that the Ridge model weights the WIGGO data much more heavily than it does the FIFA data.</p>
 
-				<p>Though, we can still get more precise with our analysis. Let's try running a Ridge regression on just the WIGGO and FIFA Rankings, and then another on just the WIGGO and FIFA Ratings.</p>
+				<p>Though, we can still get more precise with our analysis. Let's try running a Ridge Classification on just the WIGGO and FIFA Rankings, and then another on just the WIGGO and FIFA Ratings.</p>
 
-				<p>The following bar plot is built in a similar fashion to the previous one, though it shows the results of a Ridge regression model that was fit on just the Ranking data.</p>
+				<p>The following bar plot is built in a similar fashion to the previous one, though it shows the results of a Ridge Classification model that was fit on just the Ranking data.</p>
 
 				<img src="Assets/wiggofifa/Ridge_Rankings.png" class="plot"/>
 

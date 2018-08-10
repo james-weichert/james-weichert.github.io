@@ -80,9 +80,9 @@
 			<br />
 			<h2 id="section1">I. Logistic Regression With Penalization</h2>
 
-				<p>As an extension of a simple multinomial or One-vs-Rest logistic regression model, a new logistic regression model was trained on the combined WIGGO and FIFA data to fit the best decision boundary using a limited subset of predictors. To do this, Ridge Regression was run on the data to add a penalty term to the overall loss function that penalizes the model for having too many predictors.</p>
+				<p>As an extension of a simple multinomial or One-vs-Rest logistic regression model, a new logistic regression model was trained on the combined WIGGO and FIFA data to fit the best decision boundary using a limited subset of predictors. To do this, Ridge Classification was run on the data to add a penalty term to the overall loss function that penalizes the model for having too many predictors.</p>
 
-				<p>Ridge Regression was used on four variations of the combined WIGGO and FIFA dataset:</p>
+				<p>Ridge Classification was used on four variations of the combined WIGGO and FIFA dataset:</p>
 
 				<ul>
 					<li>All Predictors (including all WIGGO and FIFA rankings and points)</li>
@@ -91,7 +91,7 @@
 					<li>The WIGGO and FIFA rankings and points, but no other predictors</li>
 				</ul>
 
-				<p>For each regression model, KFold cross-validation was performed using <span class="code_text">RidgeClassifierCV</span> and <span class="code_text">KFold</span> from sklearn. Each time, the cross-validation chose from a list of 16 Ridge shrinkage parameters (lambdas): <span class="code_text">{0.001, 0.005, 0.1, 0.5, 1, 5, 10, 50, 100, 150, 200, 250, 1000, 10000, 50000, 100000}</span>. The results (chosen shrinkage parameters) of the 5-fold cross-validation on each data variation are shown below.</p>
+				<p>For each classification model, KFold cross-validation was performed using <span class="code_text">RidgeClassifierCV</span> and <span class="code_text">KFold</span> from sklearn. Each time, the cross-validation chose from a list of 16 Ridge shrinkage parameters (lambdas): <span class="code_text">{0.001, 0.005, 0.1, 0.5, 1, 5, 10, 50, 100, 150, 200, 250, 1000, 10000, 50000, 100000}</span>. The results (chosen shrinkage parameters) of the 5-fold cross-validation on each data variation are shown below.</p>
 
 				<ul>
 					<li>
@@ -155,7 +155,7 @@
 					<br />
 					<h3 id="section2iv">iv. Combined Ensemble</h3>
 
-						<p>In an effort to build off of the high accuracies of some of the ensemble methods, a meta-model was fit using the outputs of the Ridge Regression, Bagging, Random Forest, and AdaBoost models as the predictors. The meta-model used a simple logistic regression model to combine the four predictions into an output. While this increased the training and validation accuracies slightly, the test accuracy continued to hover around 55%. This is likely again attributable to the small sample size of the test set, which does not allow for us to measure the accuracy of a model as precisely as a larger test set would.</p>
+						<p>In an effort to build off of the high accuracies of some of the ensemble methods, a meta-model was fit using the outputs of the Ridge Classification, Bagging, Random Forest, and AdaBoost models as the predictors. The meta-model used a simple logistic regression model to combine the four predictions into an output. While this increased the training and validation accuracies slightly, the test accuracy continued to hover around 55%. This is likely again attributable to the small sample size of the test set, which does not allow for us to measure the accuracy of a model as precisely as a larger test set would.</p>
 
 						<img src="Assets/finalmodels/Ensemble_Acc.png" class="code"/>
 
@@ -166,7 +166,7 @@
 					<br />
 					<h3 id="section2v">v. Augmented Ensemble Decision Tree</h3>
 
-						<p>The final ensemble model was an augmented ensemble decision tree that included both the original predictors as well as the predictions (for each observation) of each of the four models used in the combined ensemble meta-model (i.e. Ridge Regression, Bagging, Random Forest, and AdaBoost). This model should perform better than the simple combined ensemble, as the model has both the raw match data as well as the predictions from other models. Indeed this augmented ensemble model did perform significantly better than any model before it, with high training, validation, and test accuracies, as can be seen below.</p>
+						<p>The final ensemble model was an augmented ensemble decision tree that included both the original predictors as well as the predictions (for each observation) of each of the four models used in the combined ensemble meta-model (i.e. Ridge Classification, Bagging, Random Forest, and AdaBoost). This model should perform better than the simple combined ensemble, as the model has both the raw match data as well as the predictions from other models. Indeed this augmented ensemble model did perform significantly better than any model before it, with high training, validation, and test accuracies, as can be seen below.</p>
 
 						<img src="Assets/finalmodels/AT_Acc.png" class="code"/>
 
@@ -219,6 +219,8 @@
 
 						<p>Using the neural network with the WIGGO data, the predictions for the 2018 World Cup were generated and compared to the actual results of each game. The summary of the predictions is below.</p>
 
+						<img src="Assets/finalmodels/Legend.png" class="img_small_center"/>
+
 						<ul>
 							<li><p><strong>Group Stage Matchday 1</strong>:</p>
 								<img src="Assets/finalmodels/Matchday1.png" class="img_large_center"/>
@@ -247,7 +249,7 @@
 				<table class="normal_table">
 					<tr>
 						<td class="left_align">Data Set</td>
-						<td>Ridge Regression</td>
+						<td>Ridge Classification</td>
 						<td>Bagging</td>
 						<td>AdaBoost (Boosting)</td>
 						<td>Random Forest</td>
