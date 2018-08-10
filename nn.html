@@ -59,8 +59,8 @@
 				<li><a href="#section2">Ensemble Techniques</a></li>
 					<ol type="i">
 						<li><a href="#section2i">Bagging</a></li>
-						<li><a href="#section2ii">AdaBoost (Boosting)</a></li>
-						<li><a href="#section2iii">Random Forest</a></li>
+						<li><a href="#section2ii">Random Forest</a></li>
+						<li><a href="#section2iii">AdaBoost (Boosting)</a></li>
 						<li><a href="#section2iv">Combined Ensemble</a></li>
 						<li><a href="#section2v">Augmented Ensemble Decision Tree</a></li>
 					</ol>
@@ -112,40 +112,61 @@
 			<br />
 			<h2 id="section2">II: Ensemble Techniques</h2>
 
+				<p>ON ALL PREDICTORS</p>
+
 				<div class="subcontent">
 					<br />
 					<h3 id="section2i">i: Bagging</h3>
 
-						<p>A Bagging model of 25 decision trees with max-depth of 4 predicting on the  </p>
+						<p>A Bagging model of 25 decision trees with max-depth of 4 predicting on bootsrapped samples of the training set was generated. Since the decision trees were fit on bootstrap samples, only the validation and test set accuracies are shown below.</p>
 
 						<img src="Assets/finalmodels/Bagging_Acc.png" class="code"/>
 
 					<br />
-					<h3 id="section2ii">ii: AdaBoost (Boosting)</h3>
+					<h3 id="section2ii">ii: Random Forest</h3>
 
-						<img src="Assets/finalmodels/Boosting_Acc.png" class="code"/>
-						<img src="Assets/finalmodels/Boosting_Graph.png" class="code"/>
-
-					<br />
-					<h3 id="section2iii">iii: Random Forest</h3>	
+						<p>As a second ensemble model, a random forest classifier was fit with 25 estimators and a max-depth of 5. While this model performed significantly better than the Bagging model on the validation set (2014 World Cup), it had the same test set accuracy of 54.7%.</p>
 
 						<img src="Assets/finalmodels/RF_Acc.png" class="code"/>
+
+					<br />
+					<h3 id="section2iii">iii: AdaBoost (Boosting)</h3>
+
+						<p>Building on the relative success of the random forest, an AdaBoost Boosting classifier was built with a random forest as the base classifier. This boosting model was fit with a max depth ranging from 1 to 4. The classification accuracies of each of the four AdaBoost variations as a function of the number of estimators can be seen below.</p>
+
 						<img src="Assets/finalmodels/RF_Graph.png" class="code"/>
+
+						<p>It is important to note that since the validation set is such a small set of data (Only 64 games are played at a FIFA World Cup), it is possible that the validation accuracy is higher than the training accuracy (as is the case above). While this won't always be the case, it is helpful to know that such variations are possible and that they don't necessarily constitute the theoretical validation accuracy for a larger validation set. The same is true for the test set, as it too only consists of 64 games.</p>
+
+						<p>After reviewing the plot above, it was decided that the final AdaBoost model should have a max-depth of 4, seeing as both the training and validation accuracies were the highest at that depth. Accordingly, the final AdaBoost model was used for prediction, generating the train, validation, and test accuracies seen below. The plot shows the classification accuracy as a function of the number of estimators while the final accuracy printed below the plot gives the accuracies at 100 estimators.</p>
+
+						<img src="Assets/finalmodels/Boosting_Graph.png" class="code"/>
+						<img src="Assets/finalmodels/Boosting_Acc.png" class="code"/>
+
 
 					<br />
 					<h3 id="section2iv">iv: Combined Ensemble</h3>
 
+						<p>In an effort to build off of the high accuracies of some of the ensemble methods, a meta-model was fit using the outputs of the Ridge Regression, Bagging, Random Forest, and AdaBoost models as the predictors. The meta-model used a simple logistic regression model to combine the four predictions into an output. While this increased the training and validation accuracies slightly, the test accuracy continued to hover around 55%. This is likely again attributable to the small sample size of the test set, which does not allow for us to measure the accuracy of a model as precisely as a larger test set would.</p>
+
 						<img src="Assets/finalmodels/Ensemble_Acc.png" class="code"/>
+
+						<p>The coefficients of the meta-model confirmed that AdaBoost had been the best prediction method thus far, as its logistic regression coefficient in the meta-model was significantly higher than the other three models.</p>
+
 						<img src="Assets/finalmodels/Ensemble_Graph.png" class="code"/>
 
 					<br />
 					<h3 id="section2v">v: Augmented Ensemble Decision Tree</h3>
 
+						<p>The final ensemble model was an augmented ensemble decision tree that included both the original predictors as well as the predictions (for each observation) of each of the four models used in the combined ensemble meta-model (i.e. Ridge Regression, Bagging, Random Forest, and AdaBoost). This model should perform better than the simple combined ensemble, as the model has both the raw match data as well as the predictions from other models. Indeed this augmented ensemble model did perform significantly better than any model before it, with high training, validation, and test accuracies, as can be seen below.</p>
+
 						<img src="Assets/finalmodels/AT_Acc.png" class="code"/>
 
 					<br />
 					<h3 id="section2vi">vi: Ensemble Models Summary</h3>
-					
+						
+						<p>The final classification accuracies for all ensemble models can be seen below.</p>
+
 						<img src="Assets/finalmodels/All_Ensemble_Accuracy_2.png" class="code"/>
 				</div>
 
