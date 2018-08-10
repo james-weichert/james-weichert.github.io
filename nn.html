@@ -120,7 +120,7 @@
 			<br />
 			<h2 id="section2">II. Ensemble Techniques</h2>
 
-				<p>ON ALL PREDICTORS</p>
+				<p>As we discussed in class, ensembling is usually a good way to make models more accurate. Therefore, we will fit a series of different models then attempt to stack them together for a better overall model. All ensemble models will be trained using all predictors including both the FIFA and WIGGO rankings and points.</p>
 
 				<div class="subcontent">
 					<br />
@@ -181,7 +181,7 @@
 			<br />
 			<h2>III. Neural Networks</h2>
 
-				<p>The final sophisticated model is a fully-trained neural network with a more complicated network architecture than that of the baseline neural network model. Against using the <em>keras</em> python library, a neural network was generated that attempted to match the 37 input nodes (all predictors including either FIFA or WIGGO rankings and points) with a match outcome classification (Home Win, Draw, or Home Loss). The network contains 4 hidden layers, consisting of 46, 29, 17, and 8 neurons, respectively (as seen in the diagram below). The motivation behind this network design is that by expanding the width of the network immediately, the network will be able to pick up on certain nuances in the data that would otherwise become lost by compressing the data into a layer with less depth than the input layer.</p>
+				<p>The final sophisticated model is a fully-trained neural network with a more complicated network architecture than that of the baseline neural network model. Again using the <em>keras</em> python library, a neural network was generated that attempted to match the 37 input nodes (all predictors including either FIFA or WIGGO rankings and points) with a match outcome classification (Home Win, Draw, or Home Loss). The network contains 4 hidden layers, consisting of 46, 29, 17, and 8 neurons, respectively (as seen in the diagram below). The motivation behind this network design is that by expanding the width of the network immediately, the network will be able to pick up on certain nuances in the data that would otherwise become lost by compressing the data into a layer with less depth than the input layer.</p>
 
 				<img src="Assets/finalmodels/NNDiagram2.png" class="img_xsmall_center"/>
 
