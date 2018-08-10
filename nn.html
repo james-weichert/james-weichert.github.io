@@ -43,7 +43,7 @@
 				
 			</td>
 			<td><a href="comparison.html">
-				Comparison</a>
+				Conclusions</a>
 				
 			</td>
 		</tr>
@@ -70,6 +70,9 @@
 						<li><a href="#section2v">Augmented Ensemble Decision Tree</a></li>
 					</ol>
 				<li><a href="#section3">Neural Networks</a></li>
+					<ol type="i">
+						<li><a href="#section3i">World Cup Neural Network Predictions</a></li>
+					</ol>
 				<li><a href="#section4">Summary</a></li>
 			</ol>
 			<hr />
@@ -178,10 +181,68 @@
 			<br />
 			<h2>III. Neural Networks</h2>
 
-				<p>The final sophisticated model is a fully-trained neural network with a more complicated network architecture than that of the baseline neural network model. Against using the <em>keras</em> python library, a neural network was generated that attempted to match the 37 input nodes (all predictors including either FIFA or WIGGO rankings and points) with a match outcome classification (Home Win, Draw, or Home Loss). The network </p>
+				<p>The final sophisticated model is a fully-trained neural network with a more complicated network architecture than that of the baseline neural network model. Against using the <em>keras</em> python library, a neural network was generated that attempted to match the 37 input nodes (all predictors including either FIFA or WIGGO rankings and points) with a match outcome classification (Home Win, Draw, or Home Loss). The network contains 4 hidden layers, consisting of 46, 29, 17, and 8 neurons, respectively (as seen in the diagram below). The motivation behind this network design is that by expanding the width of the network immediately, the network will be able to pick up on certain nuances in the data that would otherwise become lost by compressing the data into a layer with less depth than the input layer.</p>
+
+				<img src="Assets/finalmodels/NNDiagram2.png" class="img_xsmall_center"/>
+
+				<p>When trained on the full WIGGO dataset (50 epochs), the trained neural network was able to achieve a prediction accuracy for the test set of 62.5%, which amounts to 40 accurately-predicted World Cup games (out of 64 played).</p>
+
+				<img src="Assets/finalmodels/NN_WC_Acc.png" class="code"/>
+
+				<p>Upon inspection of the network's World Cup predictions, one can see that the network does not predict any draws, and instead only predicts games as a win or a loss. Interestingly enough, this method of match prediction coincides with that of Las Vegas bookmakers, who do not predict game outcomes as draws (see Conclusions page for more on why that is). Below are the summary statistics for each of the three neural network output neurons when predicting on the 2018 World Cup. While percentages for the 'Win' and 'Loss' neurons almost reach 100%, the 'Draw' neuron never has an activation higher than 0.32. Since the network makes its prediction by picking the neuron in the output layer with the highest activation, a maximum activation of 0.32 means that the network never predicted a draw, as the draw neuron activation never exceeded .333.</p>
+
+				<img src="Assets/finalmodels/NN_Describe.png" class="img_small_center"/>
+
+				<p>Taking into account the randomness of the neural network, a more accurate test accuracy was generated for both the WIGGO and FIFA datasets by generating 10 identical neural networks for each dataset and averaging their test set accuracies. In this way, we can see what a more precise test accuracy might look like if the test set was much larger (and was less affected by the randomness of the intial weights of the neural network). Below are the classification accuracies for the both FIFA and WIGGO datasets on the neural network.</p>
+
+					<ul>
+						<li><p><strong>WIGGO Data</strong>:</p></li>
+							<ul>
+								<li><p>Training Accuracy (At 50 Epochs): 57.7%</p></li>
+								<li><p>Validation Accuracy (At 50 Epochs): 58.1%</p></li>
+								<li><p>Test Accuracy (2018 World Cup): 57.0%</p>
+									<img src="Assets/finalmodels/WIGGO_WC.png" class="code"/>
+								</li>
+							</ul>
+						<li><p><strong>FIFA Data</strong>:</p></li>
+							<ul>
+								<li><p>Training Accuracy (At 50 Epochs): 56.7%</p></li>
+								<li><p>Validation Accuracy (At 50 Epochs): 56.0%</p></li>
+								<li><p>Test Accuracy (2018 World Cup): 55.3%</p>
+									<img src="Assets/finalmodels/FIFA_WC.png" class="code"/>
+								</li>
+							</ul>
+					</ul>
+
+				<div class="subcontent">
+					<h3 id="section3i"/>i. World Cup Neural Network Predictions</h3>
+
+						<p>Using the neural network with the WIGGO data, the predictions for the 2018 World Cup were generated and compared to the actual results of each game. The summary of the predictions is below.</p>
+
+						<ul>
+							<li><p><strong>Group Stage Matchday 1</strong>:</p>
+								<img src="Assets/finalmodels/Matchday1.png" class="img_large_center"/>
+							</li>
+							<li><p><strong>Group Stage Matchday 2</strong>:</p>
+								<img src="Assets/finalmodels/Matchday2.png" class="img_large_center"/>
+							</li>
+							<li><p><strong>Group Stage MAtchday 3</strong>:</p>
+								<img src="Assets/finalmodels/Matchday3.png" class="img_large_center"/>
+							</li>
+							<li><p><strong>Knockout Rounds</strong>:</p>
+								<img src="Assets/finalmodels/KnockoutRounds.png" class="img_large_center"/>
+							</li>
+						</ul>
+						
+
+				</div>
+
+
 
 			<br />
 			<h2>IV. Summary</h2>
+
+				<p>Below are the training, validation, and test classification accuracies for all final models.</p>
 
 				<table class="normal_table">
 					<tr>

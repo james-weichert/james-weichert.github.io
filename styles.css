@@ -196,7 +196,7 @@ ol {
 	color: #283044;
 	font-size: 0.9em;
 
-	border: 0.15em solid #283044;
+	border: 0.1em solid #283044;
 
 	text-align: center;
 }
@@ -205,7 +205,7 @@ ol {
 }
 
 .normal_table td {
-	border: 0.15em solid #283044;
+	border: 0.1em solid #283044;
 }
 
 .code_text {
@@ -223,4 +223,10 @@ ol {
 	text-align: center;
 	font-size: 1.4em;
 	color: #C95D63;
+}
+#logo {
+	width: 20%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
