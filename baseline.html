@@ -72,21 +72,21 @@
 
 			
 			<br />
-			<h2 id="section1">I: Trivial Model - Predict All Games As Home Wins</h2>
+			<h2 id="section1">I. Trivial Model - Predict All Games As Home Wins</h2>
 
 				<p>The first baseline model is, beyond random guessing of match outcomes, the most primitive of possible prediction models. This trivial model simply predicts the designated 'Home' team to win each match, since a plurality of 2018 World Cup matches ended with a win for the 'Home' team. With this prediction rule, the model achieves a 40.6% prediction accuracy. While this is more than 7% above randomness (33.33%), it is still pretty poor in terms of overall predictive ability of the model.</p>
 
 				<img src="Assets/baseline/Trivial_Acc.png" class="code"/>
 
 			<br />
-			<h2 id="section2">II: Multinomial Logistic Regression</h2>
+			<h2 id="section2">II. Multinomial Logistic Regression</h2>
 
 				<p>Beyond the trivial model, the next simplest prediction method would be a regression algorithm. Since the prediction problem in this project (i.e. predicting. World Cup outcomes) boils down to a classification problem, where the model must predict the outcome of a game from three possible outcomes, the simplest regression model is logistic regression. Although a logistic model is still fairly bare-bones relative to more complex models like neural networks, it still remains one of the best models for classification. This is supported by the high 56.3 % classification accuracy, which is more than 15% better than the trivial model and 23% better than random.</p>
 
 				<img src="Assets/baseline/Log_Acc.png" class="code"/>
 
 			<br />
-			<h2 id="section3">III: Neural Network (Multilayer Perceptron)</h2>
+			<h2 id="section3">III. Neural Network (Multilayer Perceptron)</h2>
 
 				<p>The final baseline model is a simple neural network (or multilayer perceptron). This network only has a single hidden layer, which filters the neurons down from 31 to 3 (as shown in the diagram below).</p>
 
@@ -97,7 +97,7 @@
 				<img src="Assets/baseline/NN_Acc.png" class="code"/>
 
 			<br />
-			<h2 id="section4">IV: Conclusion</h2>
+			<h2 id="section4">IV. Conclusion</h2>
 
 				<img src="Assets/baseline/Prediction_Accuracy.png" class="plot"/>
 
