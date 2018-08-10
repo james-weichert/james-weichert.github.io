@@ -122,6 +122,30 @@ table {
 	padding-top: 3vh;
 	padding-bottom: 3vh;
 }
+.subcontent {
+	width: 95%;
+	margin-left: 5%;
+}
+
+.img_med_center {
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img_small_center {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+p {
+	line-height: 1.4em;
+}
+.normal_spacing {
+	line-height: 1.4em;
+}
 
 hr {
 	background-color: #EEE;
