@@ -179,3 +179,13 @@ ol {
 .code {
 	width: 100%;
 }
+
+.normal_table {
+	color: #283044;
+	font-size: 0.9em;
+
+	border: 0.15em solid #283044;
+}
+.normal_table td {
+	border: 0.15em solid #283044;
+}
