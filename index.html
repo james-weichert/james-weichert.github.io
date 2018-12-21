@@ -1,0 +1,626 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>
+            James Weichert
+        </title>
+
+        <link rel="icon" type="image/x-icon" href="Assets/favicon.ico" />
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+<script type="text/javascript">
+    function onLoad() {
+        var wh = window.innerHeight;
+        var ww = window.innerWidth;
+
+
+
+        if((wh/ww) < (983/1651)) {
+            document.getElementById('titleSlide').style.backgroundSize = "100%";
+            document.getElementById('secondSlide').style.backgroundSize = "100%";
+            document.getElementById('thirdSlide').style.backgroundSize = "100%";
+            document.getElementById('fourthSlide').style.backgroundSize = "100%";
+            document.getElementById('fifthSlide').style.backgroundSize = "100%";
+        } else {
+            document.getElementById('titleSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('secondSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('thirdSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('thirdSlide').style.backgroundPosition = "center";
+            document.getElementById('fourthSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('fourthSlide').style.backgroundPosition = "center";
+            document.getElementById('fifthSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('fifthSlide').style.backgroundPosition = "center";
+        }
+    }
+    function slideColor() {
+        var firstY = document.getElementById('titleSlide').getBoundingClientRect().top;
+        var secondY = document.getElementById('fifthSlide').getBoundingClientRect().top;
+        var currentY = window.scrollY;
+
+        var proportion = (currentY)/(secondY - firstY);
+        var percent = 50 * proportion;
+
+        document.getElementById('slider').style.width = 25 + percent 
+        + "%";  
+    }
+
+    function scrollThis(elm) { 
+        document.getElementById(elm).scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
+</script>
+
+<style type="text/css">
+body {
+    font-family: 'Lato', sans-serif;
+    color: #2D2D2D;
+    margin: 0;
+    overflow-x: hidden;
+}
+.slides {
+    position: relative;
+    width: 98vw;
+    height: 92vh;
+    top: 0;
+    left: 0;
+    left: 1vw;
+    text-align: center;
+    z-index: -1;
+
+    color: #FFF;
+
+}
+#titleSlide {
+    margin-top: 7vh;
+    background-image: url('Assets/Waterfront.png');
+    background-size:  auto 100%;
+    background-repeat: no-repeat;
+    
+    color: #FFF;
+}
+#secondSlide {
+    margin-top: 1.5vh;
+    background-color: #FF6F59;
+    /*background:url('Assets/PinkMountain.png');
+    background-size:  100%;
+    background-repeat: no-repeat;*/
+}
+#thirdSlide {
+    margin-top: -1vh;
+    background-color: #14C886;
+    /*background:url('Assets/cactus.png');
+    background-size:  100%;
+    background-repeat: no-repeat;*/
+}
+#fourthSlide {
+    margin-top: -1vh;
+    background-color: #119DA4;
+    /*background:url('Assets/rain.png');
+    background-size:  100%;
+    background-repeat: no-repeat;*/
+}
+#fifthSlide {
+    margin-top: -1vh;
+    background-color: #F1B137;
+    /*background:url('Assets/lake.png');
+    background-size:  100%;
+    background-repeat: no-repeat;*/
+}
+#footer {
+    position: relative;
+    width: 100vw;
+    height: 2vh;
+    border: 0;
+    top: 0;
+    margin-top: 0vh;
+    text-align: center;
+
+}
+#logo {
+    width: 70%;
+}
+#header {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: #FFF;
+}
+#box {
+    width: 60%;
+    border-color: #FFF;
+    border-width: 0.2em;
+    border-style: solid;
+    margin-left: 20%;
+}
+#navTable {
+    width: 75%;
+    margin-left: 12.5%;
+    height: 5vh;
+}
+#navTable {
+    padding: 0;
+    border-collapse: collapse;
+}
+#navTable td {
+    width: 25%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+#navBar {
+    height: 1vh;
+    background-color: #EEE;
+    /*box-shadow: 0 0.3vh 0.1vh #CCC;*/
+}
+#slider {
+    background-color: #A4036F;
+    width: 25%;
+    height: 100%;
+}
+h1 {
+    font-size: 2.5em;
+}
+#titleAnchor {
+    position: absolute;
+    top: -10vh;
+}
+#secondAnchor {
+    position: absolute;
+    top: 143.5vh;
+}
+#thirdAnchor {
+    position: absolute;
+    top: 236.5vh;
+
+}
+#fifthAnchor {
+    position: absolute;
+    top: 424vh;
+}
+#centerDiv {
+    height: 30%;
+    top: 35%;
+    position: relative;
+}
+.text {
+    position: relative;
+    left: 0;
+    margin-left: 8%;
+    top: 10%;
+    text-align: left;
+
+    min-width: 30%;
+    max-width: 80%;
+
+}
+#resume {
+    text-align: right;
+}
+#work {
+    text-align: left;
+}
+#contact {
+    text-align: right;
+}
+#container {
+    width: 70%;
+    position: relative;
+    float: left;
+
+    height: 80%;
+    top: 0;
+    padding-top: 8%;
+
+    
+}
+#textBox {
+    width: 100%;
+    color: #FFF;
+    padding: 4%;
+}
+#image {
+    width: 30%;
+    position: relative;
+    float: right;
+    text-align: center;
+    background-color: green;
+
+    height: 80%;
+    top: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+#icon {
+    width: 25%;
+    position: relative;
+    float: right;
+    text-align: right;
+    right: 0;
+    margin-right: -3%;
+    padding-top: 15%;
+}
+
+.right-align {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    z-index: -99;
+/*    float: right;
+    margin-top: -55vh;
+    margin-right: 2%;
+    overflow: hidden;*/
+}
+.left-align {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: -99;
+}
+#circles {
+    height: 110%;
+    margin-top: -15%;
+    margin-left: -5vw;
+}
+#squares {
+    height: 110%;
+    margin-top: -15%;
+    margin-right: -5vw;
+}
+#triangles {
+    margin-top: -15%;
+    height: 120%;
+    margin-right: -5vw;
+}
+#pentagons {
+    height: 115%;
+    margin-top: -15%;
+    margin-left: -2vw;
+}
+
+.normal-table {
+    width: 80%;
+    
+}
+.normal-table td {
+    width: 33%;
+    vertical-align: top;
+    padding: 1%;
+}
+#right-table {
+    float: right;
+}
+#jw {
+    width: 25%;
+}
+
+#james {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+}
+#james td {
+    text-align: left;
+}
+#james-text {
+    width: 70%;
+    padding: 2vw;
+    height: 100%;
+}
+#james-image {
+    width: 30%;
+    padding: none;
+}
+#james-image img {
+    width: 100%;
+}
+.logo_box {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    opacity: 100%;
+
+    transition: all 1s ease;
+}
+.logo_box img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hover_box {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    position: relative;
+    margin-top: -20vh;
+
+    opacity: 0;
+
+    color: black;
+
+    transition: all 0.5s ease;
+}
+.hover_box:hover {
+    opacity: 1;
+}
+
+#ww {
+    background-color: #74C6DB;
+    
+}
+#wordly {
+    background-color: #7FDEEA;
+}
+#schoolsource {
+    background-color: #ED6A5D;
+}
+#mm {
+    background-color: #000;
+}
+#fifa {
+    background-color: #FF0000;
+}
+
+#whole_thing {
+    position: relative;
+    z-index: 0;
+}
+
+.text_box {
+    position: absolute;
+    padding-top: 1vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 0.8em;
+}
+
+#slide_footer {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+}
+#header {
+    user-select: none;
+}
+#navTable td:hover {
+    cursor: pointer;
+    color: #9F9F9F;
+}
+
+#bottomDiv {
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    margin-bottom: 2vh;
+}
+
+.hover {
+    user-select: none;
+}
+
+.hover:hover {
+    cursor: pointer;
+    color: #F3F3F3;
+}
+
+</style>
+    </head>
+    <body onload="onLoad()" onscroll="slideColor()">
+        <div id="whole_thing">
+        <div id="titleSlide" class="slides">
+                <div id="centerDiv" onclick="scrollThis('secondAnchor')">
+                <h1 class="hover">JAMES WEICHERT</h1>
+                <h3 class="hover" id="this">Programmer | Designer | Entrepreneur</h3>
+            </div>
+            <div id="bottomDiv" onclick="scrollThis('secondAnchor')">
+                <h4 class="hover">Scroll Down.</h4>
+            </div>
+        </div>
+        <div id="secondSlide" class="slides">
+                <table id="james">
+                    <tr>
+                        <td id="james-text">
+                            <h2>Hi, I'm James.</h2>
+                            <p>I'm a High School Student with a passion for Programming, Design, and Entrepreneurship.</p>
+                            <p>Early on, I discovered my love for designing and creating products and digital experiences. &#13;&#10; I've strengthened my skills by developing applications and programs in various programming languages with an emphasis on Front-End Web Development.</p>
+                            <p>Coming from a Do-It-Yourself and Learn-It-Yourself background, my programming style combines industry standards with a general understanding of computer science and design, along with my own set of tricks, shortcuts and workarounds. Particularly, my work focuses on finding the intersections between technology and everyday life, whether through applications, physical products, or a particular design protocol.</p>
+                            <p>Nowadays, I find myself eager to learn a new programming language or discover a new design convention. And while it may not always be easy to find the time to create new digital experiences with my busy schedule, I try to seize every opportunity to use my skills to elevate my life and the lives of others.</p>
+                        </td>
+                        <td id="james-image">
+                            <img src="Assets/JamesIcon.svg"/>
+                        </td>
+                    </tr>
+                </table>
+                <div class="right-align">
+                    <img src="Assets/triangles.png" id="triangles"/>
+                </div>
+           
+            
+        </div>
+        <div id="thirdSlide" class="slides">
+                <div class="text" id="resume"> 
+                        <h2>Skills.</h2>
+                        <table class="normal-table" id="right-table">
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <h4>Programs &amp; Applications</h4>
+                                    <p>Adobe Creative Suite - Photoshop, Illustrator, After Effects, Premiere, Experience Design</p>
+                                    <p>GameSalad, Unity 3D, Scratch</p>
+                                    <p>Arduino, littleBits, Lego Mindstorms, Makey Makey</p>
+                                    <p>Google Dive Suite - Docs, Slides, Sheets</p>
+                                    <p>Microsoft Office Suite - Word, PowerPoint, Excel</p>
+                                </td>
+                                <td>
+                                    <h4>Programming &amp; Markup Languages</h4>
+                                    <p>HTML, CSS</p>
+                                    <p>JavaScript</p>
+                                    <p>PHP, AJAX, MySQL</p>
+                                    <p>Python</p>
+                                    <p>Java</p><p>C++</p><p>Swift</p>
+                                </td>
+                            </tr>
+                        </table>
+                    
+                        </div>
+                        <div class="left-align">
+                            <img src="Assets/circles.png" id="circles">  
+                        </div>
+                        
+                    </div>
+        <div id="fourthSlide" class="slides">
+                <div class="text" id="work"> 
+                        <h2>Past Work.</h2>
+                        <table class="normal-table">
+                            <tr>
+                                <td>
+                                    <h4>Wisdom Warriors</h4>
+                                    
+                                    <div class="logo_box" id="ww">
+                                        <img src="Assets/Projects/WW.png"/>
+                                    </div>
+                                    <div class="hover_box">  
+                                      <div class="text_box">
+                                          <p>Wisdom Warriors is an online educational video game for 1st grade students. The game teaches core 1st grade curriculum in English language arts, mathematics, science, and social studies by encouraging students to solve academic problems to advance the plot in the video game.</p>
+                                      </div>
+                                    </div>
+                                    
+                                </td>
+                                <td>
+                                    <h4>Wordly</h4>
+                                    
+                                    <div class="logo_box" id="wordly">
+                                        <img src="Assets/Projects/wordly.png"/>
+                                    </div>
+                                    <div class="hover_box">
+                                        <div class="text_box">
+                                          <p>Wordly is an online foreign language learning website that seeks to provide quick and hassle-free vocabulary practice sessions in Spanish, German, and French. Users can customize the difficulty and can save unknown words to a personal word bank for later practice.</p>
+                                      </div>  
+                                    </div>
+                                    
+                                </td>
+                                <td>
+                                    <h4>greenATL</h4>
+
+                                    <div class="logo_box" id="greenATL">
+                                        <img src="Assets/Projects/greenATL.png"/>
+                                    </div>
+                                    <div class="hover_box">  
+                                        <div class="text_box">
+                                            <p>greenATL is an online advocacy campaign for Atlanta, GA green-space and greenification spanning multiple online media platforms including Twitter, Instagram, and Snapchat. The campaign features a custom website and video combined through a cohesive brand identity.</p>
+                                        </div>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4>SchoolSource</h4>
+                                    <div class="logo_box" id="schoolsource">
+                                        <img src="Assets/Projects/SchoolSource.png"/>
+                                    </div>
+                                    <div class="hover_box">
+                                        <div class="text_box">
+                                            <p>SchoolSource is a website that allows students to 'School-source' their academic questions. Student questions are answered by other students while teachers can see what questions are being askedso they can better tailor their lesson plans to students' learning needs.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h4>Minions and Meatshields</h4>
+
+                                    <div class="logo_box" id="mm">
+                                        <img src="Assets/Projects/minion.png"/>
+                                    </div>
+                                    <div class="hover_box">  
+                                        <div class="text_box">
+                                            <p>Minions and Meatshields is a fantasy platform mobile game set in a dystopian world of zombie bunnies. The game features multiple levels, each with new weapons, objectives, and level designs and is available on both iOS and Android.</p>
+                                        </div>
+                                    </div>
+                                    
+                                </td>
+                                <td>
+                                    <h4>FIFA World Cup Match Prediction</h4>
+
+                                    <div class="logo_box" id="fifa">
+                                        <img src="Assets/Projects/NN.png"/>
+                                    </div>
+                                    <div class="hover_box">
+                                        <div class="text_box">
+                                            <p>I built an artificially-intelligent “neural network” to predict the outcomes of matches at the 2018 FIFA World Cup. Using this neural network, I found that it is possible to predict the outcomes of World Cup matches approximately 57%-60% of the time.</p>
+                                        </div>  
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right-align">
+                            <img src="Assets/squares.png" id="squares">  
+                        </div>
+        </div>
+        <div id="fifthSlide" class="slides">
+                <div class="text" id="contact"> 
+                    <h2>Contact Me.</h2>
+                    <p>james.p.weichert@gmail.com</p>
+                    <img src="Assets/jw.png" id="jw"/>
+                </div>
+                <div id="slide_footer">
+                    <p>Site design by James Weichert.</p>
+                     <p>Copyright &copy; 2018. All Rights Reserved.</p>
+                </div>
+                <div class="left-align">
+                            <img src="Assets/pentagons.png" id="pentagons">  
+                        </div>
+        </div>
+        </div>
+
+        <div id="header">
+            <table id="navTable">
+                <tr>
+                    <td onclick="scrollThis('titleAnchor')">
+                        Home
+                    </td>
+                    <td onclick="scrollThis('thirdAnchor')">
+                        Skills and Past Work
+                    </td>
+                    <td onclick="scrollThis('fifthAnchor')">
+                        Contact Me
+                    </td>
+                </tr>
+            </table>
+            <div id="navBar">
+                <div id="slider">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            
+        </div>
+        <div id="titleAnchor"></div>
+        <div id="secondAnchor"></div>
+        <div id="thirdAnchor"></div>
+        <div id="fifthAnchor"></div>
+    </body>
+</html>

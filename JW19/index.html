@@ -1,0 +1,310 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>
+            James Weichert
+        </title>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+<script type="text/javascript">
+    function onLoad() {
+        var wh = window.innerHeight;
+        var ww = window.innerWidth;
+
+
+
+        if((wh/ww) < (983/1651)) {
+            document.getElementById('titleSlide').style.backgroundSize = "100%";
+            document.getElementById('secondSlide').style.backgroundSize = "100%";
+            document.getElementById('thirdSldie').style.backgroundSize = "100%";
+            document.getElementById('fourthSlide').style.backgroundSize = "100%";
+            document.getElementById('fifthSlide').style.backgroundSize = "100%";
+        } else {
+            document.getElementById('titleSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('secondSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('thirdSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('thirdSlide').style.backgroundPosition = "center";
+            document.getElementById('fourthSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('fourthSlide').style.backgroundPosition = "center";
+            document.getElementById('fifthSlide').style.backgroundSize = "auto 100%";
+            document.getElementById('fifthSlide').style.backgroundPosition = "center";
+        }
+    }
+    function slideColor() {
+        var firstY = document.getElementById('titleSlide').getBoundingClientRect().top;
+        var secondY = document.getElementById('fifthSlide').getBoundingClientRect().top;
+        var currentY = window.scrollY;
+
+        var proportion = (currentY)/(secondY - firstY);
+        var percent = 50 * proportion;
+
+        document.getElementById('slider').style.width = 25 + percent 
+        + "%";  
+    }
+    function scrollThis(elm) {
+        document.getElementById(elm).scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+    }
+</script>
+
+<style type="text/css">
+@import url("https://use.typekit.net/nuq4qnf.css");
+
+body {
+    font-family: 'Europa', sans-serif;
+    color: #2D2D2D;
+    margin: 0;
+    overflow-x: hidden;
+}
+.bold {
+    font-family: 'Europa-Bold', sans-serif;
+}
+.slides {
+    position: relative;
+    width: 98vw;
+    height: 92vh;
+    top: 0;
+    left: 0;
+    left: 1vw;
+    text-align: center;
+    z-index: -1;
+
+}
+#titleSlide {
+    margin-top: 7vh;
+    background-image: url('Assets/James.JPG');
+    background-size:  auto 100%;
+    background-repeat: no-repeat;
+    
+    color: #FFF;
+}
+#thirdSlide {
+    margin-top: -1vh;
+    background-color: #5688C7;
+    background-size:  100%;
+    background-repeat: no-repeat;
+}
+#fifthSlide {
+    margin-top: -2vh;
+    background-color: #B53D51;
+    background-size:  100%;
+    background-repeat: no-repeat;
+}
+#footer {
+    position: relative;
+    width: 100vw;
+    height: 2vh;
+    border: 0;
+    top: 0;
+    margin-top: 0vh;
+    text-align: center;
+    background-color: white;
+}
+#logo {
+    width: 70%;
+}
+#header {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background-color: #FFF;
+}
+#box {
+    width: 60%;
+    border-color: #FFF;
+    border-width: 0.2em;
+    border-style: solid;
+    margin-left: 20%;
+}
+#navTable {
+    width: 75%;
+    margin-left: 12.5%;
+    height: 5vh;
+}
+#navTable {
+    padding: 0;
+    border-collapse: collapse;
+}
+#navTable td {
+    width: 25%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+#navBar {
+    height: 1vh;
+    background-color: #EEE;
+    /*box-shadow: 0 0.3vh 0.1vh #CCC;*/
+}
+#slider {
+    background-color: #2C5784;
+    width: 25%;
+    height: 100%;
+}
+h1 {
+    font-size: 2.5em;
+}
+#titleAnchor {
+    position: absolute;
+    top: -10vh;
+}
+#thirdAnchor {
+    position: absolute;
+    top: 139.1vh;
+    width: 10vw;
+    height: 10vh;
+
+}
+#fifthAnchor {
+    position: absolute;
+    top: 233.2vh;
+    width: 10vw;
+    height: 10vh;
+
+}
+#centerDiv {
+    height: 30%;
+    top: 35%;
+    position: relative;
+}
+.text {
+    position: relative;
+    left: 0;
+    margin-left: 8%;
+    top: 10%;
+    text-align: left;
+
+    min-width: 30%;
+    max-width: 80%;
+
+}
+#resume {
+    text-align: left;
+}
+#container {
+    width: 70%;
+    position: relative;
+    float: left;
+
+    height: 80%;
+    top: 0;
+    padding-top: 8%;
+
+    
+}
+#textBox {
+    width: 100%;
+    color: #FFF;
+    padding: 4%;
+}
+#image {
+    width: 30%;
+    position: relative;
+    float: right;
+    text-align: center;
+    background-color: green;
+
+    height: 80%;
+    top: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+
+}
+#icon {
+    width: 25%;
+    position: relative;
+    float: right;
+    text-align: right;
+    right: 0;
+    margin-right: -3%;
+    padding-top: 15%;
+}
+
+.red {
+    color: #B53D51; 
+}
+
+
+
+</style>
+    </head>
+    <body onload="onLoad()" onscroll="slideColor()">
+        <div id="header">
+            <table id="navTable">
+                <tr>
+                    <td onclick="scrollThis('titleAnchor')">
+                        About Me
+                    </td>
+                    <td onclick="scrollThis('thirdAnchor')">
+                        My Platform
+                    </td>
+                    <td onclick="scrollThis('fifthAnchor')">
+                        Contact Me
+                    </td>
+                </tr>
+            </table>
+            <div id="navBar">
+                <div id="slider">
+
+                </div>
+            </div>
+        </div>
+        <div id="titleSlide" class="slides">
+            <div class="text">
+                <div id="container">
+                <div id="textBox">
+                <h2>Hi, I'm James.</h2>
+                <p>I'm a High School Student with a passion for Design, Programming, and Entrepreneurship.</p>
+                <p>Early on, I discovered my love for designing and creating products and digital experiences. &#13;&#10;
+                    I've grown my skills by developing applications and programs in various programming languages 
+                    with an emphasis on Front-End Development.</p>
+                <p>Coming from a Do-It-Yourself and Learn-It-Yourself background, my programming style combines 
+                    industry standards with a general understanding of computer science and design, along with my own set of tricks, shortcuts and workarounds.
+                    Particularly, my work focusses on finding the intersections between technology and everyday life, whether through applications, physical products, or a particular design protocol.</p>
+                <p>Nowadays, I find myself eager to learn a new programming language or discover a new design convention. 
+                    And while it may not always be easy to find the time to create new digital experiences with my busy schedule, 
+                    I try to seize every opportunity to use my skills to elevate my life and the lives of others.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="thirdSlide" class="slides">
+                <div class="text" id="resume"> 
+                        <h2 class="red">My Platform</h2>
+                        <h4>Transparency and Accessibility</h4>
+                        <ul>
+                            <li>Open SCA Meetings, where students can listen in on student council deliberations</li>
+                            <li>SCA Forums, where students can voice concerns and suggestions to the SCA and administration</li>
+                            <li>Regular Schoology updates about events and SCA progress</li>
+                        </ul>
+                        <h4>Class of 2019</h4>
+                        <ul>
+                            <li>Advocate for Senior Study and Off-Campus Rights</li>
+                            <li>Expand the number of exam study days for Seniors taking IB and AP Exams</li>
+                            <li>Senior cookouts and picnics</li>
+                            <li>Senior alcove décor</li>
+                        </ul>
+                        <h4>School Traditions and School Spirit</h4>
+                        <ul>
+                            <li>More Spirit Weeks with increased participation and more prizes</li>
+                            <li>Homecoming Planning</li>
+                            <li>Recognize achievements in sports, arts, and other extracurriculars</li>
+                            <li>Increase fundraising efforts through 3rd-Block contests and other fundraisers</li>
+                        </ul>
+                    </div>
+        </div>
+        <div id="fifthSlide" class="slides">
+                <h1>HELLO</h1>
+        </div>
+        <div id="footer">
+
+        </div>
+        <div id="titleAnchor"></div>
+        <div id="thirdAnchor"></div>
+        <div id="fifthAnchor"></div>
+    </body>
+</html>

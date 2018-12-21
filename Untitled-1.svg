@@ -1,0 +1,33 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="160.89968" height="152.10622" viewBox="0 0 160.89968 152.10622">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e2c55d;
+      }
+
+      .cls-2 {
+        fill: #d9601e;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        fill: #fff;
+        font-family: AvenirNext-DemiBold, Avenir Next;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.01199em;
+      }
+
+      .cls-5 {
+        fill: #b0413e;
+      }
+    </style>
+  </defs>
+  <title>Untitled-1</title>
+  <polygon class="cls-1" points="160.9 105.151 159.497 139.836 126.829 147.354 108.042 117.316 129.099 91.233 160.9 105.151"/>
+  <polygon class="cls-2" points="96.857 152.106 152.704 85.834 106.832 12.492 22.634 33.436 16.469 119.722 96.857 152.106"/>
+  <text class="cls-3" transform="translate(39.19332 100.94203)">J<tspan class="cls-4" x="24.89941" y="0">W</tspan></text>
+  <polygon class="cls-5" points="35.99 0 59.204 30.348 37.562 61.936 0.971 51.11 0 12.831 35.99 0"/>
+</svg>
