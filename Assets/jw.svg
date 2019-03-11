@@ -1,0 +1,38 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="175.96288" height="151.39489" viewBox="0 0 175.96288 151.39489">
+    <defs>
+    <style>
+      .cls-1 {
+        fill: #e2c55d;
+        transform-origin: 145.09224px 121.04038px;
+        transform: rotate(60deg);
+      }
+
+      .cls-2 {
+        fill: #d9601e;
+        transform-origin: center center;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        fill: #fff;
+        font-family: AvenirNext-DemiBold, Avenir Next;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.01199em;
+      }
+
+      .cls-5 {
+        fill: #b0413e;
+        transform: rotate(20deg);
+        transform-origin: 30.853px 32.724px;
+      }
+    </style>
+  </defs>
+  <title>Untitled-1</title>
+  <polygon class="cls-1" points="145.092 88.568 175.963 111.083 164.171 147.513 126.013 147.513 114.222 111.083 145.092 88.568"/>
+  <polygon class="cls-2" points="105.075 151.395 160.922 85.123 115.05 11.781 30.853 32.724 24.688 119.011 105.075 151.395"/>
+  <text class="cls-3" transform="translate(47.41217 100.2307)">J<tspan class="cls-4" x="24.89941" y="0">W</tspan></text>
+  <polygon class="cls-5" points="30.871 0 61.741 22.515 49.95 58.945 11.792 58.945 0 22.515 30.871 0"/>
+</svg>

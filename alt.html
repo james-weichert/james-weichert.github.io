@@ -178,7 +178,6 @@
 				return i;
 			}
 		}
-
 		function link_extend(id) {
 			switch(id) {
 				case "top":
@@ -216,7 +215,7 @@
 
     		color: #FFF;
 
-    		background-color: #FF6F59;
+    		background-color: #83AD51;
 		}
 		.cls-5 {
 			transition: all 2s ease;
@@ -232,12 +231,14 @@
 		}
 		#logo_container {
 			position: absolute;
-			width: 35vw;
-			height: 35vw;
-			top: 45%;
-			margin-top: -17.5vw;
+			width: 60vw;
+			height: 50vh;
+
 			left: 50%;
-			margin-left: -17.5vw;
+			margin-left: -30vw;
+
+			top: 50%;
+			margin-top: -25vh;
 		}
 		#Layer_1 {
 			width: 100%;
@@ -267,6 +268,15 @@
 			text-decoration: none;
 			color: white;
 		}
+		#fc {
+			width: 45vw;
+			position: relative;
+
+			left: 50%;
+			margin-left: -22.5vw;
+
+			margin-top: 5vh;
+		}
 
 		.link {
 			width: 14vw;
@@ -283,18 +293,18 @@
 			padding-left: 1.5vw;
 		}
 		#top {
-			background-color: #b0413e;
+			background-color: #477570;
 			margin-right: -4vw;
 			transition: all 1s ease;
 		}
 		#middle {
-			background-color: #d9601e;
+			background-color: #DE7063;
 			margin-top: 5vh;
 			margin-right: -6vw;
 			transition: all 1s ease;
 		}
 		#bottom {
-			background-color: #F1B137;
+			background-color: #F8CA48;
 			margin-top: 10vh;
 			margin-right: -8vw;
 			transition: all 1s ease;
@@ -324,44 +334,7 @@
 
 
 	<div id="logo_container">
-		<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="185.96288" height="151.39489" viewBox="0 0 185.96288 151.39489">
-  			<defs>
-    			<style>
-				      .cls-1 {
-				        fill: #F1B137;
-				        transform-origin: 149.09224px 121.04038px;
-				       	transform: rotate(60deg);
-				      }
-
-				      .cls-2 {
-				        fill: #d9601e;
-
-				      }
-
-				      .cls-3 {
-				        font-size: 50px;
-				        fill: #fff;
-				        font-family: 'Lato',AvenirNext-DemiBold, Avenir Next;
-				        font-weight: 700;
-				      }
-
-				      .cls-4 {
-				        letter-spacing: -0.01199em;
-				      }
-
-				      .cls-5 {
-				        fill: #b0413e;
-				        transform: rotate(20deg);
-				        transform-origin: 35.853px 32.724px;
-				      }
-
-    			</style>
-  			</defs>
-  			<polygon class="cls-1" points="150.092 88.568 180.963 111.083 169.171 147.513 131.013 147.513 119.222 111.083 150.092 88.568"/>
-  			<polygon class="cls-2" points="110.075 151.395 165.922 85.123 120.05 11.781 35.853 32.724 29.688 119.011 110.075 151.395"/>
-  			<text class="cls-3" transform="translate(52.41217 100.2307)">J<tspan class="cls-4" x="29.89941" y="0">W</tspan></text>
-  			<polygon class="cls-5" points="35.871 0 66.741 22.515 54.95 58.945 16.792 58.945 5 22.515 35.871 0"/>
-		</svg>
+		<img src="FCDash.png" id="fc"/>
 	</div>
 			<div id="lower">
 				<p class="medium" id="goodMorning">Good morning, James.</p>
@@ -375,7 +348,7 @@
 				<div class="link" id="middle" onmouseover="link_extend('middle')" onmouseout="link_retract('middle')">
 					<p class="light">Projects</p>
 				</div>
-				<a href="alt.html"><div class="link" id="bottom" onmouseover="link_extend('bottom')" onmouseout="link_retract('bottom')">
+				<a href="index.html"><div class="link" id="bottom" onmouseover="link_extend('bottom')" onmouseout="link_retract('bottom')">
 					<p class="light">Dash</p>
 				</div></a>
 			</div>

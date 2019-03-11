@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+
+		<link rel="icon" type="image/x-icon" href="Assets/favicon.ico" />
+
+	    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+		<script type="text/javascript">
+
+			function load_func() {
+				startTime();
+			}
+
+			function startTime() {
+	    		var today = new Date();
+	    		var h = today.getHours();
+	    		var m = today.getMinutes();
+	    		var s = today.getSeconds();
+	    		h = twelveTime(h);
+	    		m = checkTime(m);
+	    		s = checkTime(s);
+	    		document.getElementById('replaceTime').innerHTML =
+	    		h + ":" + m + ":" + s;
+
+	    		var m = today.getMonth() + 1;
+	    		var d = today.getDate();
+	    		var y = today.getYear() - 100;
+
+	    		var t = setTimeout(startTime, 500);
+			}
+
+			function checkTime(i) {
+	    		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+	    		return i;
+			}
+
+			function twelveTime(i) {
+				if (i > 12) {
+					switch (i) {
+						case 13:
+							i = 1;
+							break;
+						case 14:
+							i = 2;
+							break;
+						case 15:
+							i = 3;
+							break;
+						case 16:
+							i = 4;
+							break;
+						case 17:
+							i = 5;
+							break;
+						case 18:
+							i = 6;
+							break;
+						case 19:
+							i = 7;
+							break;
+						case 20:
+							i = 8;
+							break;
+						case 21:
+							i = 9;
+							break;
+						case 22:
+							i = 10;
+							break;
+						case 23:
+							i = 11;
+							break;
+						case 24:
+							i = 12;
+							break;
+						default:
+							break;
+					}
+
+					return i;
+				} else {
+					return i;
+				}
+			}
+
+			function link_extend(id) {
+				switch(id) {
+					case "top":
+						document.getElementById(id).style.marginRight = "0vw";
+						break;
+					case "middle":
+						document.getElementById(id).style.marginRight = "-2vw";
+						break;
+					case "bottom":
+						document.getElementById(id).style.marginRight = "-4vw";
+						break;
+				}
+			}
+			function link_retract(id) {
+				switch(id) {
+					case "top":
+						document.getElementById(id).style.marginRight = "-4vw";
+						break;
+					case "middle":
+						document.getElementById(id).style.marginRight = "-6vw";
+						break;
+					case "bottom":
+						document.getElementById(id).style.marginRight = "-8vw";
+						break;
+				}
+			}
+		</script>
+
+		<style type="text/css">
+			body {
+				font-family: 'Lato', sans-serif;
+	    		color: #2D2D2D;
+	    		margin: 0;
+	    		overflow: hidden;
+
+	    		color: #FFF;
+
+	    		background-color: #8CDEDC;
+			}
+			.cls-5 {
+				transition: all 2s ease;
+			}
+			.cls-5:hover {
+				transform: rotate(380deg);
+			}
+			.cls-1 {
+				transition: all 2s ease;
+			}
+			.cls-1:hover {
+				transform: rotate(420deg);
+			}
+			#logo_container {
+				position: absolute;
+				width: 35vw;
+				height: 35vw;
+				top: 45%;
+				margin-top: -17.5vw;
+				left: 50%;
+				margin-left: -17.5vw;
+			}
+			#Layer_1 {
+				width: 100%;
+				height: 100%;
+
+			}
+
+			#header {
+				width: 100vw;
+			}
+			#nav_table {
+				width: 100%;
+			}
+			#nav_table td {
+				width: 33.3333%;
+				text-align: center;
+			}
+
+			#lower {
+				position: absolute;
+				width: 100vw;
+				bottom: 0;
+				text-align: center;
+				margin-bottom: 2vh;
+			}
+			a {
+				text-decoration: none;
+				color: white;
+			}
+
+			.link {
+				width: 14vw;
+				height: 5vh;
+
+				position: absolute;
+				right: 0;
+
+				top: 3%;
+
+				line-height: 50%;
+			}
+			.link p {
+				padding-left: 1.5vw;
+			}
+			#top {
+				background-color: #841C26;
+				margin-right: -4vw;
+				transition: all 1s ease;
+			}
+			#middle {
+				background-color: #2191FB;
+				margin-top: 5vh;
+				margin-right: -6vw;
+				transition: all 1s ease;
+			}
+			#bottom {
+				background-color: #BA274A;
+				margin-top: 10vh;
+				margin-right: -8vw;
+				transition: all 1s ease;
+			}
+		</style>
+
+	</head>
+	<body onload="load_func()">
+		<div id="header">
+			<table id="nav_table">
+				<tr>
+					<td>
+
+					</td>
+					<td>
+						<div id="time">
+							<h1>Projects</h1>
+							<h2 id="replaceTime">Time</h2>
+
+						</div>
+					</td>
+					<td>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+		<div id="logo_container">
+		</div>
+
+				<div id="right">
+					<a href="http://james-weichert.github.io" target="_new"><div class="link" id="top" onmouseover="link_extend('top')" onmouseout="link_retract('top')">
+						<p class="light">Portfolio</p>
+					</div></a>
+					<div class="link" id="middle" onmouseover="link_extend('middle')" onmouseout="link_retract('middle')">
+						<p class="light">Projects</p>
+					</div>
+					<a href="index.html"><div class="link" id="bottom" onmouseover="link_extend('bottom')" onmouseout="link_retract('bottom')">
+						<p class="light">Dash</p>
+					</div></a>
+				</div>
+
+	</body>
+	</html>
