@@ -3,13 +3,7 @@
 
 @media (min-width: 600px) {
   .courses div {
-    height: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .courses div {
-    height: 100% !important;
+    height: 32vh;
   }
 }
 
@@ -117,15 +111,15 @@ strong {
   margin-left: 15vw;
   margin-right: 15vw;
 
-  margin-top: -15vh;
-
-
   border-radius: 1em;
 
   padding-top: 3vh;
   padding-bottom: 3vh;
 
-  
+
+
+  position: sticky;
+
   box-shadow: 0.3em 0.4em 0.0em 0.0em rgba(0, 0, 0, 0.2);
 }
 
@@ -149,8 +143,6 @@ strong {
 .foreground {
   transform-origin: 0;
   transform: translateZ(10vh);
-
-
 }
 
 #main {
@@ -208,6 +200,15 @@ strong {
 
   padding-left: 3vw;
   padding-right: 3vw;
+}
+
+#profile_banner {
+    
+    top: 0;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+
+    margin-top: 15vh !important;
 }
 
 .feature-image {
@@ -302,7 +303,7 @@ strong {
 
   border-radius: 0.5em;
 
-  height: 28vh;
+  height: 25vh;
 
   padding: 1vw;
 
@@ -321,9 +322,8 @@ strong {
 
 .text_cell {
   width: 60%;
-
+  padding: none;
   vertical-align: top;
-  padding-bottom: 1vh !important;
 }
 .image_cell {
   width: 40%;
