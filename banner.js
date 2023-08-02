@@ -8,7 +8,7 @@ var next = 0;
 var current;
 var previous;
 
-let h = 400;
+let h = 300;
 let w = document.body.offsetWidth;
 
 /*function setup() {

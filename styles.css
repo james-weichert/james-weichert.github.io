@@ -3,13 +3,7 @@
 
 @media (min-width: 600px) {
   .courses div {
-    height: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .courses div {
-    height: 100% !important;
+    height: 32vh;
   }
 }
 
@@ -19,6 +13,8 @@ body {
   margin: 0px;
 
   perspective: 10px;
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -64,10 +60,9 @@ p a:hover {
 
 
 p {
-  
-  padding-left: 2em;
-  padding-right: 2em;
+
   font-weight: 300;
+  font-size: 0.95em;
 }
 
 li {
@@ -83,10 +78,15 @@ strong {
   margin-top: -15vh;
 }
 
-.banner {
+#banner {
   z-index: -10;
   width: 100vw;
-  height: 40vh;
+
+
+  overflow-y: hidden;
+
+  height: 20vh !important;
+
 }
 
 .background {
@@ -110,23 +110,32 @@ strong {
   background-color: #FFF !important;
 
   z-index: 10;
-  width: 65vw;
+
   padding-left: 2.5vw;
   padding-right: 2.5vw;
 
-  margin-left: 15vw;
-  margin-right: 15vw;
+  width: 65vw;
 
-  margin-top: -15vh;
+  margin-left: auto;
+  margin-right: auto;
 
+  border-radius: 0.5em;
 
-  border-radius: 1em;
+  margin-top: 20vh;
 
   padding-top: 3vh;
   padding-bottom: 3vh;
 
+  opacity: 1;
   
-  box-shadow: 0.3em 0.4em 0.0em 0.0em rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3em 0.3em 0.4em 0.0em rgba(0, 0, 0, 0.1);
+  
+
+}
+#header_content {
+  
+  width: 65vw;
+
 }
 
 .parallax {
@@ -148,18 +157,16 @@ strong {
 
 .foreground {
   transform-origin: 0;
-  transform: translateZ(10vh);
-
-
+  transform: translateZ(20vh);
 }
 
 #main {
-  width: 70vw;
+  width: 60vw;
 
   position: relative;
 
   left: 50%;
-  margin-left: -35vw;
+  margin-left: -30vw;
   margin-top: 5vh;
 
 }
@@ -204,22 +211,32 @@ strong {
   width: 20vw;
   min-width: 250px;
   min-height: 250px;
-  height: 20vw;
+  height: auto;
 
   padding-left: 3vw;
   padding-right: 3vw;
+
 }
 
-.feature-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+#profile_banner {
 
-  width: 92%;
+  min-height: 10vh;
+  
+
+}
+
+
+.feature-image {
+
+  width: 25vh;
   border-radius: 100%;
+
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  min-width: 10vw;
 }
 
 #ring {
@@ -229,6 +246,8 @@ strong {
   border-radius: 100%;
 
   position: relative;
+
+
 }
 
 #nav {
@@ -260,6 +279,9 @@ strong {
 
 .courses {
   justify-content: space-evenly;
+
+  width: 65vw;
+  margin-left: -5vw;
 }
 
 .courses h2 {
@@ -302,15 +324,16 @@ strong {
 
   border-radius: 0.5em;
 
-  height: 28vh;
+  height: 27vh;
 
-  padding: 1vw;
+  padding: 1vh;
 
   margin-top: 1vw;
   margin-bottom: 1vw;
 
   transition: border 0.2s ease-in-out;
 }
+
 
 .class_logo {
   width: 100%;
@@ -321,9 +344,8 @@ strong {
 
 .text_cell {
   width: 60%;
-
+  padding: none;
   vertical-align: top;
-  padding-bottom: 1vh !important;
 }
 .image_cell {
   width: 40%;
@@ -396,4 +418,21 @@ footer {
 footer p {
   font-size: 0.9em;
   color:  #037971;
+}
+
+.parallax {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  perspective: 200vw;
+  perspective-origin: 50%;
+
+  height: 100vh;
+
+  position: relative;
+}
+
+.parallax-background {
+  
+  transform: translateZ(0px);
 }
