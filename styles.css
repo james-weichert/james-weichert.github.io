@@ -325,6 +325,7 @@ strong {
   border-radius: 0.5em;
 
   height: 27vh;
+  max-height: 300px;
 
   padding: 1vh;
 
