@@ -220,7 +220,11 @@ strong {
 
   margin-top: 3vh;
 
+  font-size: calc(max(3.5em - var(--scroll) * 5em, 2.5em));
+
 }
+
+
 
 .flex {
   display: flex;
@@ -264,10 +268,12 @@ strong {
   padding-left: 3vw;
   padding-right: 3vw;
 
-  min-width: 10vw;
+  min-width: 100px;
   transition: width 0.1s;
   width: calc(30vh - var(--scroll) * 300vh);
 }
+
+
 
 #ring {
   width: 93%;

@@ -316,8 +316,9 @@ strong {
   
 }
 
-
 .courses div {
+  display: flex;
+  align-items: center;
   max-width: 350px;
 
   border: 0.2em solid rgba(4, 154, 143, 0.2);
@@ -436,4 +437,14 @@ footer p {
 .parallax-background {
   
   transform: translateZ(0px);
+}
+
+#progress {
+  position: fixed;
+  height: 1vh;
+  width: calc(var(--scroll) * 100vw);
+  background-color: #037971;
+  left: 0;
+  bottom: 0;
+  opacity: 0.8;
 }
