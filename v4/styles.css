@@ -13,6 +13,8 @@ body {
   margin: 0px;
 
   perspective: 10px;
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -129,7 +131,7 @@ strong {
 
   border-radius: 0.5em;
 
-  margin-top: -15vh !important;
+  margin-top: -20vh !important;
 
   padding-top: 3vh;
   padding-bottom: 3vh;
@@ -141,7 +143,22 @@ strong {
   transition: width 0.1s;
   width: calc(120vh + var(--scroll) * 320vh);
 
-  max-width: 100vw;
+
+
+  max-width: 95vw;
+}
+
+#buffer {
+  width: 100vw;
+  height: 100vh;
+}
+
+#header_content {
+  
+  width: 65vw;
+  min-width: 800px;
+
+
 }
 
 .parallax {
