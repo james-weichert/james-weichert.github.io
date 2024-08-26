@@ -448,3 +448,12 @@ footer p {
   bottom: 0;
   opacity: 0.8;
 }
+
+li a {
+  color: #037971;
+  font-weight: 400;
+}
+
+li a:hover {
+  color: #03B5AA;
+}
