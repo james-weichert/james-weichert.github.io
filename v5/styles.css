@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;800&display=swap');
+
+
+@media (min-width: 600px) {
+  .courses div {
+    height: 32vh;
+  }
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+  color: #314349;
+  margin: 0px;
+
+  perspective: 10px;
+
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3.5em;
+
+  line-height: 1em;
+
+  margin-bottom: 1vh;
+}
+
+h2 {
+  font-weight: 600;
+
+  color: #037971;
+}
+
+h3 {
+  font-weight: 500;
+}
+h4, h5 {
+  font-weight: 300;
+}
+
+hr {
+  border: 0.5px solid #DDD;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  color: #037971;
+  font-weight: 400;
+}
+
+p a:hover {
+  color: #03B5AA;
+}
+
+
+p {
+
+  font-weight: 300;
+  font-size: 0.95em;
+}
+
+li {
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.anchor {
+  position: absolute;
+  margin-top: -15vh;
+}
+
+#banner {
+  z-index: -10;
+  width: 100vw;
+
+
+  overflow-y: hidden;
+
+  height: 20vh !important;
+
+}
+
+.background {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.background canvas {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  z-index: -15;
+
+  width: 100%;
+
+}
+
+.header {
+
+  background-color: #FFF !important;
+
+  z-index: 10;
+
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+
+  width: 65vw;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 0.5em;
+
+  margin-top: 20vh;
+
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+
+  opacity: 1;
+  
+  box-shadow: 0.3em 0.3em 0.4em 0.0em rgba(0, 0, 0, 0.1);
+  
+
+}
+#header_content {
+  
+  width: 65vw;
+
+}
+
+.parallax {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  perspective: 700px;
+  perspective-origin: 50%;
+
+  height: 100vh;
+
+  position: relative;
+}
+
+.parallax-background {
+  
+  transform: translateZ(0px);
+}
+
+.foreground {
+  transform-origin: 0;
+  transform: translateZ(20vh);
+}
+
+#main {
+  width: 60vw;
+
+  position: relative;
+
+  left: 50%;
+  margin-left: -30vw;
+  margin-top: 5vh;
+
+}
+
+.content {
+  width: 90%;
+  left: 50%;
+  margin-left: -45%;
+
+  position: relative;
+
+}
+
+#name {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  width: 50%;
+
+  min-width: 350px;
+
+  text-align: center;
+}
+
+#jamesw {
+
+  color: #037971;
+  text-align: center;
+
+  margin-top: 3vh;
+
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+#profile {
+  width: 20vw;
+  min-width: 250px;
+  min-height: 250px;
+  height: auto;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+}
+
+#profile_banner {
+
+  min-height: 10vh;
+  
+
+}
+
+
+.feature-image {
+
+  width: 25vh;
+  border-radius: 100%;
+
+  padding-left: 1vh;
+  padding-right: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  min-width: 10vw;
+}
+
+#ring {
+  width: 93%;
+  height: 93%;
+  border: 0.6em solid #049A8F;
+  border-radius: 100%;
+
+  position: relative;
+
+
+}
+
+#nav {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#nav td {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#nav a {
+  color:  #049A8F;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  transition: background-color 0.5s ease-in-out;
+
+
+  border-radius: 0.15em;
+}
+
+#nav a:hover {
+  background-color: #049A8F;
+  color:  white;
+}
+
+.courses {
+  justify-content: space-evenly;
+
+  width: 65vw;
+  margin-left: -5vw;
+}
+
+.courses h2 {
+  font-size: 1.5em;
+
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.courses h3 {
+  font-weight: 600;
+  font-size: 1em;
+
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.courses p {
+  font-weight: 300;
+  font-size: 0.8em;
+  padding:  0;
+  margin: 0;
+}
+
+.courses ul {
+  font-size: 0.8em;
+  padding-left: 2em;
+}
+
+.courses div:hover {
+  border: 0.2em solid rgba(3, 121, 113, 0.7);
+  
+}
+
+.courses div {
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+
+  border: 0.2em solid rgba(4, 154, 143, 0.2);
+
+  border-radius: 0.5em;
+
+  height: 27vh;
+  max-height: 300px;
+
+  padding: 1vh;
+
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+
+  transition: border 0.2s ease-in-out;
+}
+
+
+.class_logo {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_cell {
+  width: 60%;
+  padding: none;
+  vertical-align: top;
+}
+.image_cell {
+  width: 40%;
+  vertical-align: text-top;
+}
+
+.job li {
+  font-size: 0.9em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.job h3 {
+  margin-top:  0.5em;
+  margin-bottom: 0.5em;
+}
+
+.job ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.indent {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.projects div {
+  max-width: 250px;
+  text-align: center;
+
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+.projects h3 {
+  margin-top: 0em;
+
+}
+
+.socials {
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.socials td {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+
+footer {
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 15;
+}
+
+footer p {
+  font-size: 0.9em;
+  color:  #037971;
+}
+
+.parallax {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  perspective: 200vw;
+  perspective-origin: 50%;
+
+  height: 100vh;
+
+  position: relative;
+}
+
+.parallax-background {
+  
+  transform: translateZ(0px);
+}
+
+#progress {
+  position: fixed;
+  height: 1vh;
+  width: calc(var(--scroll) * 100vw);
+  background-color: #037971;
+  left: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+li a {
+  color: #037971;
+  font-weight: 400;
+}
+
+li a:hover {
+  color: #03B5AA;
+}
