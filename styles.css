@@ -364,9 +364,10 @@ p a:hover {
 /* ===================*/
 
 h4 {
-	font-weight: 800;
-	font-size: 1.25em;
-	line-height: 0;
+	font-weight: 600;
+
+	color: #CACECE;
+	text-align: center;
 }
 
 h5 {
