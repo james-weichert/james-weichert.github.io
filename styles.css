@@ -111,6 +111,9 @@ li::before {
 	font-weight: 600;
 }
 
+.scroll-link:hover {
+	cursor: pointer;
+}
 
 .nav-link:hover {
 
