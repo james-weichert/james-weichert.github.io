@@ -468,3 +468,20 @@ h5 {
 	width: 1px;
 	height: 1px;
 }
+
+.quote {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+
+	border-radius: 0.5em;
+}
+
+.gq {
+	background-color: rgba(125, 186, 132, 0.2) !important;
+}
+
+.bq {
+	background-color: rgba(90, 128, 175, 0.2) !important;
+}
