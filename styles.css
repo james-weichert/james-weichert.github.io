@@ -485,3 +485,27 @@ h5 {
 .bq {
 	background-color: rgba(90, 128, 175, 0.2) !important;
 }
+
+.rq {
+	background-color: rgba(219, 94, 75, 0.2) !important;
+}
+
+.oq {
+	background-color: rgba(244, 159, 103, 0.2) !important;
+}
+
+
+.table-flex {
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.table-flex div {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
