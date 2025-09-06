@@ -509,3 +509,30 @@ h5 {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
+.food-flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 1em;
+
+}
+
+.food-flex div {
+	border: solid 0.25em  rgba(244, 159, 103, 0.2);
+	width: 40%;
+	min-width: 250px;
+
+	border-radius: 0.5em;
+
+	margin-top: 1em;
+
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.food-flex div h4 {
+	text-align: left;
+
+	color: #F49F67;
+}
