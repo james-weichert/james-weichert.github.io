@@ -666,6 +666,8 @@ h5 {
 
 .food-circle {
 
+	z-index: -99;
+
 	min-width: 200px;
 	min-height: 200px;
 
