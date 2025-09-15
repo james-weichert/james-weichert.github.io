@@ -220,6 +220,24 @@ p a:hover {
 
 }
 
+@media only screen and (max-width:600px) {
+	#main {
+		width: 80vw;
+		margin-left: -40vw;
+	}
+
+	.entry-description {
+		width: 100% !important;
+	}
+
+	.course-icon {
+		position: inherit !important;
+		display: inline-block !important;
+		padding-top: 0.5em;
+	}
+
+}
+
 .section {
 	margin-bottom: 3vh;
 }
@@ -724,4 +742,26 @@ h5 {
 
 .tip {
 	text-decoration: underline 0.15em;
+}
+
+details {
+	margin-bottom: 1em;
+}
+summary {
+	position: relative;
+	anchor-name: --summary;
+
+	&::marker {
+		content: "";
+	}
+
+	
+	&::after {
+		content: "▾";
+		position: absolute;
+		right: 0;
+	}
+}
+details[open] summary::after {
+	transform: rotate(180deg);
 }
