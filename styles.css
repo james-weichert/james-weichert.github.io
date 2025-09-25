@@ -126,7 +126,7 @@ li::before {
 	color: #7DBA84;
 }
  
-#header {
+header {
 	width: 80vw;
 	margin-left: 10vw;
 
@@ -135,7 +135,7 @@ li::before {
 	margin-bottom: 3vh;
 }
 
-#footer {
+footer {
 	padding-top: 5vh;
 	padding-bottom: 5vh;
 
@@ -210,7 +210,7 @@ p a:hover {
 }
 
 
-#main {
+main {
 
 	position: relative;
 
