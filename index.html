@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="top"></div>
-    <div id="header">
+    <header>
 
         <h1>James Weichert</h1>
         
@@ -23,13 +23,13 @@
             <a onclick="smoothScroll('research')"><div class="research-c nav-link">Research</div></a>
         </div>
 
-    </div>
+    </header>
 
-    <div id="main">
+    <main>
 
         <div class="text-center">
             <a onclick="smoothScroll('contact')" class="pointer">
-                <img id="james" src="Assets/uw_headshot.png"/>
+                <img id="james" src="Assets/uw_headshot.png" alt="Headshot of James, a 24-year old white man with short brown hair, wearing a collared shirt and blue sweater in front of a blurred outside background."/>
             </a>
         </div>
 
@@ -52,7 +52,7 @@
 
                 <p><strong>Office Hours:</strong> Wednesdays 1 - 2 PM and Fridays 2 - 3 PM in CSE 456</p>                
                 <details>
-                    <summary><strong>Coffee Chats:</strong> Mondays 11 AM - 12:30 PM in the CSE2 Atrium</summary>
+                    <summary id="coffee-chats"><strong>Coffee Chats:</strong> Mondays 11 AM - 12:30 PM in the CSE2 Atrium</summary>
                     <p>My 'coffee chats' are <strong>open to any UW student</strong> and are an opportunity to talk and ask questions about <em>anything</em> ! 
                     This includes my teaching journey, research, navigating and getting involved on campus, 
                     traveling, cooking, Seattle restaurant recommendations, existential questions, and more!</p>
@@ -143,7 +143,7 @@
                         <span class="ib">
                             <span class="cal course-code">Data 6</span> 
                             <strong class="cal-text"><a class="course-link" href="https://data6.org/su23/" target="_blank">Introduction to Computational Thinking with Data</a></strong>
-                            <img class="course-icon" src="Assets/data6.png"/>
+                            <img class="course-icon" src="Assets/data6.png" alt="The Data 6 course logo: a hexagon with intersecting blue, red, and green circles with white text on top that says 'data 6'."/>
 
                             <p class="course-roles">Summer 2022, Summer 2023</p>
                         </span>
@@ -153,7 +153,7 @@
                         <span class="ib">
                             <span class="cal course-code">Data 8</span> 
                             <strong class="cal-text"><a href="https://www.data8.org/sp23/" target="_blank">Foundations of Data Science</a></strong>
-                            <img class="course-icon" src="Assets/data8.png"/>
+                            <img class="course-icon" src="Assets/data8.png" alt="The Data 8 course logo: multiple overlapping, semi-transparent rounded rectangles rotated at different angles. Overlaid white text reads 'DATA 8'."/>
 
                             <p class="course-roles">Fall 2021 - Spring 2023</p>
                         </span>
@@ -250,10 +250,10 @@
 
             <div class="socials flex">
               <div>
-                  <a href="https://github.com/james-weichert" target="_blank"><img src="Assets/Icons/github.svg"/></a>
+                  <a href="https://github.com/james-weichert" target="_blank"><img src="Assets/Icons/github.svg" alt="Github logo in orange: silhouette of a cat"/></a>
               </div>
               <div>
-                  <a href="https://www.linkedin.com/in/james-weichert/" target="_blank"><img src="Assets/Icons/linkedin.svg"/></a>
+                  <a href="https://www.linkedin.com/in/james-weichert/" target="_blank"><img src="Assets/Icons/linkedin.svg" alt="LinkedIn logo in orange: the letters 'in' in white on an orange background"/></a>
               </div>
             </div>
 
@@ -263,7 +263,7 @@
                 <div class="entry-elements">
                     <!-- BANH MI-->
                     <div class="food-circle orange-circle">
-                        <img class="rotate-30" src="Assets/Food/banhmi.png"/>
+                        <img class="rotate-30" src="Assets/Food/banhmi.png" alt="A photo of a homemade banh mi sandwich with grilled pork and cilantro in a sliced baguette"/>
                     </div>
                     
                     <div class="entry-description">
@@ -283,13 +283,13 @@
 
 
 
-        <div id="footer">
+        <footer>
             <div class="pointer" onclick="smoothScroll('top')">Back to top.</div>
             <div>Copyright &copy; 2025. All rights reserved.</div>
-        </div>
+        </footer>
 
 
-    </div>
+    </main>
 
     <script type="text/javascript">
         
