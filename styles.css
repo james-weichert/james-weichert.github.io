@@ -720,11 +720,17 @@ h5 {
 	margin-left: -5%;
 	margin-top: -5%;
 }
+.food-down {
+	margin-top: 5% !important;
+}
 .rotate-30 {
 	transform: rotate(-30deg);
 }
 .rotate-180 {
 	transform: rotate(180deg);
+}
+.rotate-45 {
+	transform: rotate(45deg);
 }
 
 .strikethrough {
