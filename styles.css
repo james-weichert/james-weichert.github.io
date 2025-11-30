@@ -696,6 +696,19 @@ h5 {
 
 }
 
+.oval-plate {
+	width: 100% !important;
+	margin-top: 5% !important;
+	margin-left: 1% !important;
+
+}
+
+.oval-p {
+	width: 90% !important;
+	margin-top: 7.5% !important;
+	margin-left: 5% !important;
+}
+
 .plate-circle {
 	width: 90% !important;
 	margin-left: 5% !important;
