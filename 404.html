@@ -1,0 +1,166 @@
+---
+permalink: /404.html
+layout: page
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+    />
+
+    <link rel="shortcut icon" href="./assets/images/favicon-new.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/images/favicon-new.ico" type="image/x-icon">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+body {
+	font-family: 'Mukta', sans-serif;
+	color: #314349;
+	margin: 0px;
+}
+
+h1 {
+	font-weight: 800;
+  	font-size: 3.5em;
+
+  	line-height: 1.5em;
+
+  	margin-bottom: 1vh;
+}
+
+h2 {
+	font-weight: 700;
+
+	line-height: 1em;
+
+	font-size: 2em;
+}
+
+p {
+	font-size: 1.25em;
+}
+
+.center {
+	position: absolute;
+
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	text-align: center;
+}
+
+#header {
+	width: 80vw;
+
+	margin-top: 3vh;
+}
+
+#main {
+	top: 40%;
+}
+
+#footer {
+	width: 20vw;
+	min-width: 400px;
+
+	bottom: 0;
+
+	margin-bottom: 3vh;
+
+	color: #B7C0C2;
+
+}
+
+#footer a {
+	color: #B7C0C2;;
+}
+
+#footer p {
+	font-size: 1em;
+}
+
+#popup {
+	width: 30vw;
+	min-width: 300px;
+
+
+	border-radius: 1em;
+
+	display: inline-block;
+
+	color: white;
+
+	background-color: #5A80AF;
+
+	text-align: left;
+
+	padding-left: 2em;
+	padding-right: 2em;
+
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+}
+
+#popup img {
+	width: 5em;
+	position: absolute;
+
+	right: 0;
+	top: 0;
+
+	margin-right: 1.5em;
+	margin-top: 1.5em;
+
+	opacity: 50%;
+}
+
+#icon {
+	position: absolute;
+	margin-left: 2em;
+	margin-top: 2em;
+}
+
+#icon img {
+	width: 3em;
+}
+    </style>
+
+    <title>URL Not Found</title>
+  </head>
+  <body>
+
+    <div id="icon">
+      <a href="https://jpw.info">
+      <img src="./assets/images/jpw.avif"/>
+      </a>
+    </div>
+
+    <div id="header" class="center">
+      <h1>James Weichert</h1>
+    </div>
+
+    <div id="main" class="center">
+      
+      <div id="popup">
+        <h2>Link not found.</h2>
+        <p>The link you are looking for does not exist :(</p>
+
+        <img src="./assets/images/broken_link.avif" />
+      </div>
+
+
+
+    </div>
+
+    <div id="footer" class="center">
+      <p>Copyright © {{ 'now' | date: "%Y" }}. All rights reserved.<p> 
+    </div>
+    
+  </body>
+</html>

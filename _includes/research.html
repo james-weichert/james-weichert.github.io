@@ -1,0 +1,39 @@
+<div class="subhead">
+    <h2 class="research-c">Research</h2>
+    <div class="hr research-bg"></div>
+</div>
+
+<p>My research explores the dual role of CS students as consumers of and learners about AI technologies. 
+    I am interested both in what policies might shape the development and use of AI in the public and private sectors, and in how we teach students about AI and its impacts on society. 
+    A particular strand of inquiry explores student attitudes and competencies related to AI ethics and policy, culminating in the creation of a two-lecture <a href="https://github.com/james-weichert/ai-policy-module" target="_blank" class="link">"AI Policy Module"</a> for technical AI/ML and standalone CS ethics courses. 
+    The module is intended to go beyond the 'surface-level' treatment of AI ethics, focusing instead on how tools, policies, and governance structures can be leveraged to promote the responsible development and use of AI.</p>
+
+
+<h3>Thesis</h3>
+<div class="quote bq">
+
+
+    <p><strong>J. Weichert</strong> (2025). <a class="link" target="_blank" href="https://hdl.handle.net/10919/134217">"AI Education for the AI Generation: A Study of Computer Science Student Attitudes Towards AI Ethics and Implications for CS Curricula,"</a> Virginia Tech Department of Computer Science. Advisor: <a href="https://people.cs.vt.edu/hdardiry/" target="_blank" class="link">Dr. Hoda Eldardiry.</a></p>
+
+
+</div>
+
+<h3>Publications</h3>
+
+{% assign pubs_by_year = site.data.publications | group_by: "year" %}
+
+{% for year in pubs_by_year %}
+
+    <h4>{{ year.items[0].year }}</h4>
+
+    <ul>
+
+        {% for pub in year.items %}
+
+            <li>{{ pub.authors }} ({{ pub.year }}). {% if pub.url %}<a class="link" target="_blank" href="{{ pub.url }}">{% endif %}"{{ pub.title }},"{% if pub.url %}</a>{% endif %} {% if pub.type %}({{ pub.type }}){% endif %} <em>{{ pub.venue }}</em>. {% if pub.note %}({{ pub.note }}){% endif %}</li>
+
+        {% endfor %}
+
+    </ul>
+
+{% endfor %}

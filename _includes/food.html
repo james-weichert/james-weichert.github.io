@@ -1,0 +1,23 @@
+{% assign food = site.data.food[0] %}
+
+<div id="{{ food.cuisine | downcase }}">
+
+    <h3>&#127790; James' Food Corner &#127836; <a href="./food/" class="link">(more &rarr;)</a></h3>
+
+    <div class="blog-entry" id="{{ food.cuisine | downcase }}">
+        <div class="entry-elements">
+            
+            <div class="food-circle">
+                <img class="plate-circle" src="{{ food.img }}" alt="{{ food.alt }}"/>
+            </div>
+            <div class="entry-description">
+                <span class="entry-head"><span class="highlight">Recipe</span><span class="entry-title">{{ food.name }}</span></span>
+                <p>
+                {{ food.description }}
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>

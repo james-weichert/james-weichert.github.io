@@ -1,0 +1,7 @@
+- name: Thịt Kho
+  cuisine: Vietnamese
+  img: ./assets/images/food/avif/thitkho.avif
+  alt: A homemade bowl of chicken pad see ew with wide rice noodles and chinese broccoli.
+  type: Recipe
+  plate: true
+  description: "Thịt kho is a Vietnamese staple consisting of <strong>braised pork belly and hard-boiled eggs</strong> which was pretty easy to make (and just what I needed at the end of the winter quarter)."

@@ -1,0 +1,33 @@
+<div class="subhead">    
+    <h2 class="teaching-c">Teaching</h2>
+    <div class="hr teaching-bg"></div>
+</div>
+
+<p>
+    At the University of Washington, I teach courses on introductory programming, AI/ML, and social impacts of computing.
+    I'm especially interested in how to teach <em>with</em> and <em>about</em> artificial intelligence in both introductory and upper-level courses. 
+</p>
+
+{% assign courses_by_uni = site.data.classes | group_by: "university" %}
+
+{% for university in courses_by_uni %}
+
+<h3>{{ university.items[0].university }}</h3>
+
+<ul class="class-list" id="{{ university.items[0].uni }}">
+
+    {% for course in university.items %}
+
+    <li>
+        <span class="inline-block">
+            <span class="course-code">{{ course.course }}</span>
+            <strong class="course-text">{% if course.url %}<a href="{{ course.url }}" target="_blank">{% endif %}{{ course.name }}{% if course.url %}</a>{% endif %}</strong>
+            <p class="course-terms">{{ course.terms }}</p>
+        </span>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+{% endfor %}
