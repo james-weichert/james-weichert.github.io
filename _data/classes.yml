@@ -1,11 +1,17 @@
 # University of Washington
 
+- course: CSE 473
+  name: Introduction to Artificial Intelligence
+  university: University of Washington
+  uni: uw
+  url: https://courses.cs.washington.edu/courses/cse473/26su
+  terms: Summer 2026
 - course: CSE 391
   name: System and Software Tools
   university: University of Washington
   uni: uw
   url: https://cs.uw.edu/391
-  terms: Spring 2026
+  terms: Spring 2026, Summer 2026
 - course: CSE 480
   name: Computer Ethics Seminar
   university: University of Washington
