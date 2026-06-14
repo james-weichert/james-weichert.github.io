@@ -29,12 +29,12 @@ quarter: spring
 
 course_1: CSE 391
 course_1_url: https://cs.uw.edu/391
-course_2: CSE 480
-course_2_url: https://cs.uw.edu/480
+course_2: CSE 473
+course_2_url: https://courses.cs.washington.edu/courses/cse473/26su
 
 email: "jamespw [at] washington [dot] edu"
 office: CSE 456
-oh: "Tuesdays 10 - 11 AM"
+oh: "Tuesdays and Wednesdays 9:30 - 10:30 AM"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
