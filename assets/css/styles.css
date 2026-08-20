@@ -825,7 +825,9 @@ details[open] summary::after {
 .no-bullet-list {
 	padding: 0;
 	list-style-position: inside;
-	line-height: 2.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 
 	li::before {
 		content: none;
