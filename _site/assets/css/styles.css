@@ -4,6 +4,7 @@
     --green: #7DBA84;
 	--lighter-green: #A1CEA7;
 	--green-background: rgba(125, 186, 132, 0.25);
+	--dark-green: rgba(78, 133, 86, 0.75);
 
     --red: #DB5E4B;
 	--lighter-red: #E48577;
@@ -207,7 +208,11 @@ main {
 }
 
 @media only screen and (max-width:600px) {
-	#main {
+	html {
+		font-size: 1.1em;
+	}
+
+	main {
 		width: 80vw;
 		margin-left: -40vw;
 	}
@@ -804,3 +809,25 @@ details[open] summary::after {
 }
 
 /* ==== END FOOD ====== */
+
+.tag {
+	font-weight: 600;
+	color: white !important;
+
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+
+	border-radius: 0.5em;
+	margin-right: 0.25em;
+	background-color: var(--dark-green);
+}
+
+.no-bullet-list {
+	padding: 0;
+	list-style-position: inside;
+	line-height: 2.5em;
+
+	li::before {
+		content: none;
+	}
+}

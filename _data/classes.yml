@@ -1,5 +1,17 @@
 # University of Washington
 
+- course: CSE 160
+  name: Data Programming
+  university: University of Washington
+  uni: uw
+  url: https://courses.cs.washington.edu/courses/cse160/
+  terms: Winter 2026, Autumn 2026
+- course: CSE 480
+  name: Computer Ethics Seminar
+  university: University of Washington
+  uni: uw
+  url: https://cs.washington.edu/cse480/
+  terms: Spring 2026, Winter 2026, Autumn 2026
 - course: CSE 473
   name: Introduction to Artificial Intelligence
   university: University of Washington
@@ -12,18 +24,6 @@
   uni: uw
   url: https://cs.uw.edu/391
   terms: Spring 2026, Summer 2026
-- course: CSE 480
-  name: Computer Ethics Seminar
-  university: University of Washington
-  uni: uw
-  url: https://cs.washington.edu/cse480/
-  terms: Spring 2026, Winter 2026
-- course: CSE 160
-  name: Data Programming
-  university: University of Washington
-  uni: uw
-  url: http://courses.cs.washington.edu/courses/cse160/26wi/
-  terms: Winter 2026
 - course: CSE 121
   name: Introduction to Computer Programming I
   university: University of Washington
@@ -31,40 +31,40 @@
   url: http://courses.cs.washington.edu/courses/cse121/25au/
   terms: Autumn 2025
 
-# Virginia Tech
+# # Virginia Tech
 
-- course: CS 4664
-  name: Machine Learning Capstone
-  university: Virginia Tech
-  uni: vt
-  terms: Spring 2025
-- course: CS 5805
-  name: Machine Learning I
-  university: Virginia Tech
-  uni: vt
-  terms: Fall 2024
-- course: CS 5806
-  name: Machine Learning II
-  university: Virginia Tech
-  uni: vt
-  terms: Spring 2024
-- course: CS 1114
-  name: Introduction to Software Design
-  university: Virginia Tech
-  uni: vt
-  terms: Fall 2023
+# - course: CS 4664
+#   name: Machine Learning Capstone
+#   university: Virginia Tech
+#   uni: vt
+#   terms: Spring 2025
+# - course: CS 5805
+#   name: Machine Learning I
+#   university: Virginia Tech
+#   uni: vt
+#   terms: Fall 2024
+# - course: CS 5806
+#   name: Machine Learning II
+#   university: Virginia Tech
+#   uni: vt
+#   terms: Spring 2024
+# - course: CS 1114
+#   name: Introduction to Software Design
+#   university: Virginia Tech
+#   uni: vt
+#   terms: Fall 2023
 
-# Berkeley
+# # Berkeley
 
-- course: Data 6
-  name: Introduction to Computational Thinking with Data
-  university: University of California, Berkeley
-  uni: ucb
-  url: https://data6.org/su23/
-  terms: Summer 2022, Summer 2023
-- course: Data 8
-  name: Foundations of Data Science
-  university: University of California, Berkeley
-  uni: ucb
-  url: https://www.data8.org/sp23/
-  terms: Fall 2021, Spring 2022, Fall 2022, Spring 2023
+# - course: Data 6
+#   name: Introduction to Computational Thinking with Data
+#   university: University of California, Berkeley
+#   uni: ucb
+#   url: https://data6.org/su23/
+#   terms: Summer 2022, Summer 2023
+# - course: Data 8
+#   name: Foundations of Data Science
+#   university: University of California, Berkeley
+#   uni: ucb
+#   url: https://www.data8.org/sp23/
+#   terms: Fall 2021, Spring 2022, Fall 2022, Spring 2023

@@ -1,7 +1,7 @@
-- name: Thịt Kho
-  cuisine: Vietnamese
-  img: ./assets/images/food/avif/thitkho.avif
-  alt: A homemade bowl of chicken pad see ew with wide rice noodles and chinese broccoli.
+- name: Lomo Saltado
+  cuisine: Peruvian
+  img: ./assets/images/food/avif/lomosaltado.avif
+  alt: A plate of homemade lomo saltado, a Peruvian dish of steak, onions and tomatoes with sides of white rice and french fries.
   type: Recipe
   plate: true
-  description: "Thịt kho is a Vietnamese staple consisting of <strong>braised pork belly and hard-boiled eggs</strong> which was pretty easy to make (and just what I needed at the end of the winter quarter)."
+  description: "Among the many culinary masterpieces of Peruvian cooking, lomo saltado is simply unbeatable for me. <strong>Stir fry thin strips of steak in soy sauce, oyster sauce, and aji amarillo paste</strong> along with red onion, scallions, and tomatoes. Don’t forget to serve with <em>both</em> white rice and french fries!"
