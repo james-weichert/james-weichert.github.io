@@ -217,6 +217,10 @@ main {
 		margin-left: -40vw;
 	}
 
+	h1 {
+		font-size: 3em;
+	}
+
 	.entry-description {
 		width: 100% !important;
 	}
