@@ -62,21 +62,24 @@
                 <p>
                     This {{ site.quarter }}, I'm teaching <strong><a href="{{ site.course_1_url }}" target="_blank">{{ site.course_1 }}</a></strong> 
                     {% if site.course_2 %}
-                        and <strong><a href="{{ site.course_2_url }}" target="_blank">{{ site.course_2 }}</a></strong>
-                    {% endif %}.
+                        and <strong><a href="{{ site.course_2_url }}" target="_blank">{{ site.course_2 }}</a></strong>.
+                    {% else %}
+                        .
+                    {% endif %}
                 </p>
 
                 <p><strong>Office Hours:</strong> {{ site.oh }} in {{ site.office }}</p>                
                 
-                <!--
+                {% if site.coffee_chats %}
                 <details>
-                    <summary id="coffee-chats"><strong>Coffee Chats:</strong> Mondays 10:30 AM - 12 PM in the CSE2 Atrium</summary>
+                    <summary id="coffee-chats"><strong>Coffee Chats:</strong> {{ site.coffee_chats }}</summary>
                     <p>My 'coffee chats' are <strong>open to any UW student</strong> and are an opportunity to talk and ask questions about <em>anything</em> ! 
-                    This includes my teaching journey, research, navigating and getting involved on campus, 
-                    traveling, cooking, Seattle restaurant recommendations, existential questions, and more!</p>
+                    This includes courses, research, navigating and getting involved on campus, 
+                    traveling, cooking, Seattle restaurant recommendations, my teaching journey, existential questions, and more!</p>
                 <p>This is a great opportunity to say hi, for me to get to know you, or to just <em>chill</em>. (bring your own beverage!)</p>
                 </details>
-                -->
+                {% endif %}
+               
                 
                 
             </div>
@@ -91,12 +94,17 @@
             <ul class="no-bullet-list">
                 <li>
                     <span class="tag"><strong>Books</strong></span>
-                    <em>Atlas of AI</em> by Kate Crawford, 
-                    <em>Venice: A New History</em> by Thomas F. Madden
+                    {% assign books = site.data.current | where: "type", "Book" %}
+                    {% for book in books %}
+                        <em>{{ book.title }}</em> by {{ book.author }}{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
                 </li>
                 <li>
                     <span class="tag"><strong>Food</strong></span>
-                    Bruschetta &#127813;, scones &#129390;
+                    {% assign foods = site.data.current | where: "type", "Food" %}
+                    {% for food in foods %}
+                        {{ food.food }} {{ food.emoji }}{% unless forloop.last %},&nbsp;{% endunless %}
+                    {% endfor %}
                 </li>
             </ul>
             

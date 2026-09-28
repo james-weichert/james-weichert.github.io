@@ -1,0 +1,12 @@
+- type: Book
+  title: The Age of Surveillance Capital
+  author: Shoshana Zuboff
+- type: Book
+  title: "Venice: A New History"
+  author: Thomas F. Madden
+- type: Food
+  food: Tacos
+  emoji: 🌮
+- type: Food
+  food: Bruschetta
+  emoji: 🍅

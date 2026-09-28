@@ -25,18 +25,19 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jpw.info" # the base hostname & protocol for your site, e.g. http://example.com
 
-show_oh: false
+show_oh: true
 
-quarter: summer
+quarter: autumn
 
-course_1: CSE 391
-course_1_url: https://cs.uw.edu/391
-course_2: CSE 473
-course_2_url: https://courses.cs.washington.edu/courses/cse473/26su
+course_1: CSE 160
+course_1_url: https://cs.uw.edu/160
+course_2: CSE 480
+course_2_url: https://cs.uw.edu/480
 
 email: "jamespw [at] washington [dot] edu"
 office: CSE 456
-oh: "Tuesdays and Wednesdays 9:30 - 10:30 AM"
+oh: "Wednesdays 11am - 12pm, Thursdays 11:30am - 12:30pm"
+coffee_chats: "Mondays 1:30 - 3pm in the CSE2 (Gates Center) Atrium"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
