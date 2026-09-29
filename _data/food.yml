@@ -1,7 +1,7 @@
-- name: Lomo Saltado
-  cuisine: Peruvian
-  img: ./assets/images/food/avif/lomosaltado.avif
-  alt: A plate of homemade lomo saltado, a Peruvian dish of steak, onions and tomatoes with sides of white rice and french fries.
+- name: Katsu
+  cuisine: Japanese
+  img: ./assets/images/food/avif/katsu.avif
+  alt: A plate of homemade chicken katsu served with katsu sauce, white rice, and sauteed vegetables.
   type: Recipe
   plate: true
-  description: "Among the many culinary masterpieces of Peruvian cooking, lomo saltado is simply unbeatable for me. <strong>Stir fry thin strips of steak in soy sauce, oyster sauce, and aji amarillo paste</strong> along with red onion, scallions, and tomatoes. Don’t forget to serve with <em>both</em> white rice and french fries!"
+  description: "It's always a good week when Japanese-style katsu is on the menu. I prefer to use chicken thighs over pork cutlets (tonkatsu) to achieve a good balance between crispy exterior and perfectly-cooked meat. <strong>Dredge the thinned-out chicken thighs with flour, egg, and panko breading before shallow frying</strong>. But the crispy katsu isn't complete without white rice and a heavy drizzle of <strong>specialty katsu sauce</strong> (e.g. <a href='https://www.amazon.com/Bull-Dog-Bull-Dog-Tonkatsu-Sauce/dp/B0002IZD1G?th=1'>Bulldog brand</a>)."
