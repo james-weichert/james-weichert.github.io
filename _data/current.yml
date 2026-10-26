@@ -1,12 +1,12 @@
 - type: Book
-  title: The Age of Surveillance Capital
-  author: Shoshana Zuboff
+  title: Data Empire
+  author: Roopika Risam
 - type: Book
-  title: "Venice: A New History"
-  author: Thomas F. Madden
+  title: "The New Jim Crow: Mass Incarceration in the Age of Colorblindness"
+  author: Michelle Alexander
 - type: Food
-  food: Tacos
-  emoji: 🌮
+  food: Oysters
+  emoji: 🦪
 - type: Food
-  food: Bruschetta
-  emoji: 🍅
+  food: Homemade Paste
+  emoji: 🍝
