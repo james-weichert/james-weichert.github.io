@@ -1,4 +1,9 @@
 # 2026
+# - name: artifacts_sigcse
+#   title: "Surfacing and Evaluating Social Impacts of Computing with Student-Generated Ethics Artifacts"
+#   authors: "N. Talukdar and <strong>J. Weichert</strong>"
+#   venue: ACM Technical Symposium on Computer Science Education (SIGCSE) 2027
+
 - name: ai_alignment_lab
   title: "Exploring the AI Principles-to-Practices Gap with an Interactive AI Alignment Lab"
   authors: "<strong>J. Weichert</strong>"
