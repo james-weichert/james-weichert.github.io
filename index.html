@@ -90,17 +90,17 @@
                 In my spare time, I like to travel &#128646;, read &#128218;, and <a href="./food/">cook</a> &#127859;.
             </p>
 
-            <h3>What I'm Currently Enjoying...</h3>
+            <h3>What I'm Currently...</h3>
             <ul class="no-bullet-list">
                 <li>
-                    <span class="tag"><strong>Books</strong></span>
+                    <span class="tag"><strong>Reading</strong></span>
                     {% assign books = site.data.current | where: "type", "Book" %}
                     {% for book in books %}
                         <em>{{ book.title }}</em> by {{ book.author }}{% unless forloop.last %}, {% endunless %}
                     {% endfor %}
                 </li>
                 <li>
-                    <span class="tag"><strong>Food</strong></span>
+                    <span class="tag"><strong>Eating</strong></span>
                     {% assign foods = site.data.current | where: "type", "Food" %}
                     {% for food in foods %}
                         {{ food.food }} {{ food.emoji }}{% unless forloop.last %},&nbsp;{% endunless %}
